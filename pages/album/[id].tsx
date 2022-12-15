@@ -1,4 +1,9 @@
 import { useRouter } from "next/router";
+import Image from "next/image";
+import Header from "../../components/header";
+import Spotify from "../../components/spotify";
+import AppleMusic from "../../components/applemusic";
+import Amazon from "../../components/amazon";
 
 export async function getStaticPaths() {
   // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
@@ -13,16 +18,35 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps() {
+  const res = await fetch("https://stream-api.kitahina.co/album");
+  const albums = await res.json();
+
   return {
-    props: { data: {} },
+    props: { albums },
   };
 }
 
-const Album = () => {
+const Album = ({ albums }: any) => {
   const router = useRouter();
   const { id } = router.query;
 
-  return <h1>{id}</h1>;
+  const getAlbum = (albumId: any) => {
+    return albums.data.find(({ id }: any) => id === albumId);
+  };
+
+  const album = getAlbum(id);
+
+  return (
+    <div className="container mx-auto">
+      <Header />
+      <div>
+        <h2 className="text-xl font-bold">{album.name}</h2>
+        <Spotify id={album.spotify} />
+        <AppleMusic id={album.applemusic} />
+        <Amazon id={album.amazon} />
+      </div>
+    </div>
+  );
 };
 
 export default Album;
