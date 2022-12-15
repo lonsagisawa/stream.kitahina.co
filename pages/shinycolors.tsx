@@ -11,6 +11,49 @@ const ShinyColors = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header subTitle="Shiny Colors" color="#8dbafe" />
+      <h2 className="text-xl font-bold">P@NORAMA WING</h2>
+      <ul>
+        <li>
+          <Link href="/album/lacm-24251" className="underline">
+            P@NORAMA WING 01
+          </Link>
+        </li>
+        <li>
+          <Link href="/album/lacm-24252" className="underline">
+            P@NORAMA WING 02
+          </Link>
+        </li>
+        <li>
+          <Link href="/album/lacm-24253" className="underline">
+            P@NORAMA WING 03
+          </Link>
+        </li>
+        <li>
+          <Link href="/album/lacm-24254" className="underline">
+            P@NORAMA WING 04
+          </Link>
+        </li>
+        <li>
+          <Link href="/album/lacm-24255" className="underline">
+            P@NORAMA WING 05
+          </Link>
+        </li>
+        <li>
+          <Link href="/album/lacm-24256" className="underline">
+            P@NORAMA WING 06
+          </Link>
+        </li>
+        <li>
+          <Link href="/album/lacm-24257" className="underline">
+            P@NORAMA WING 07
+          </Link>
+        </li>
+        <li>
+          <Link href="/album/lacm-24258" className="underline">
+            P@NORAMA WING 08
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
