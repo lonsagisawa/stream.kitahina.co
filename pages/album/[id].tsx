@@ -63,18 +63,21 @@ const Album = ({ albums }: any) => {
           <>
             <div className="flex flex-row my-2">
               <div
-                className="border-b-2 border-green-500 p-2 cursor-pointer"
+                className="border-b-2 border-green-500 p-2 cursor-pointer hover:bg-gray-100 transition"
                 onClick={this.enableSpotify}
               >
                 Spotify
               </div>
               <div
-                className="p-2 cursor-pointer"
+                className="p-2 cursor-pointer hover:bg-gray-100 transition"
                 onClick={this.enableAppleMusic}
               >
                 Apple Music
               </div>
-              <div className="p-2 cursor-pointer" onClick={this.enableAmazon}>
+              <div
+                className="p-2 cursor-pointer hover:bg-gray-100 transition"
+                onClick={this.enableAmazon}
+              >
                 Prime Music
               </div>
             </div>
@@ -85,16 +88,22 @@ const Album = ({ albums }: any) => {
         return (
           <>
             <div className="flex flex-row my-2">
-              <div className="p-2 cursor-pointer" onClick={this.enableSpotify}>
+              <div
+                className="p-2 cursor-pointer hover:bg-gray-100 transition"
+                onClick={this.enableSpotify}
+              >
                 Spotify
               </div>
               <div
-                className="border-b-2 border-rose-500 p-2 cursor-pointer"
+                className="border-b-2 border-rose-500 p-2 cursor-pointer hover:bg-gray-100 transition"
                 onClick={this.enableAppleMusic}
               >
                 Apple Music
               </div>
-              <div className="p-2 cursor-pointer" onClick={this.enableAmazon}>
+              <div
+                className="p-2 cursor-pointer hover:bg-gray-100 transition"
+                onClick={this.enableAmazon}
+              >
                 Prime Music
               </div>
             </div>
@@ -105,17 +114,20 @@ const Album = ({ albums }: any) => {
         return (
           <>
             <div className="flex flex-row my-2">
-              <div className="p-2 cursor-pointer" onClick={this.enableSpotify}>
+              <div
+                className="p-2 cursor-pointer hover:bg-gray-100 transition"
+                onClick={this.enableSpotify}
+              >
                 Spotify
               </div>
               <div
-                className="p-2 cursor-pointer"
+                className="p-2 cursor-pointer hover:bg-gray-100 transition"
                 onClick={this.enableAppleMusic}
               >
                 Apple Music
               </div>
               <div
-                className="border-b-2 border-orange-500 p-2 cursor-pointer"
+                className="border-b-2 border-orange-500 p-2 cursor-pointer hover:bg-gray-100 transition"
                 onClick={this.enableAmazon}
               >
                 Prime Music
