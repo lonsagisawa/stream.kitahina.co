@@ -11,8 +11,14 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <p className="my-4">
+      <p className="my-2">
         サブスクリプションサービスで楽しむアイドルマスターの音楽
+      </p>
+      <p className="my-2">
+        <h2 className="text-xl font-bold">既知の問題</h2>
+        <ul className="list-disc list-inside">
+          <li>FirefoxでPrime Musicの埋め込みが表示されません</li>
+        </ul>
       </p>
       <p>
         <ul className="text-2xl font-bold">
