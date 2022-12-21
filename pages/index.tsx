@@ -12,7 +12,7 @@ const Home = () => {
       </Head>
       <Header />
       <p className="my-4">
-        サブスクリプションサービスで聴けるアイマス楽曲まとめ
+        サブスクリプションサービスで楽しむアイドルマスターの音楽
       </p>
       <p>
         <ul className="text-2xl font-bold">
