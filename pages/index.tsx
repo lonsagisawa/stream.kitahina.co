@@ -15,9 +15,37 @@ const Home = () => {
         サブスクリプションサービスで聴けるアイマス楽曲まとめ
       </p>
       <p>
-        <Link href="/shinycolors" className="underline text-2xl font-bold">
-          シャイニーカラーズ
-        </Link>
+        <ul className="text-2xl font-bold">
+          <li>
+            765PRO ALLSTARS
+            <span className="text-gray-300 text-lg"> - 現在対応中です</span>
+          </li>
+          <li>
+            <span className="text-gray-300">
+              シンデレラガールズ
+              <span className="text-gray-300 text-lg">
+                - 取り扱い予定はございません
+              </span>
+            </span>
+          </li>
+          <li>
+            <Link href="/millionlive" className="underline">
+              ミリオンライブ
+            </Link>
+            <span className="text-gray-300 text-lg"> - 現在対応中です</span>
+          </li>
+          <li>
+            SideM
+            <span className="text-gray-300 text-lg">
+              - 対応を検討しています
+            </span>
+          </li>
+          <li>
+            <Link href="/shinycolors" className="underline">
+              シャイニーカラーズ
+            </Link>
+          </li>
+        </ul>
       </p>
     </div>
   );
