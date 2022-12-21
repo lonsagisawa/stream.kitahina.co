@@ -11,6 +11,24 @@ const ShinyColors = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header subTitle="Shiny Colors" color="#8dbafe" />
+      <h2 className="text-xl font-bold">Synthe-Side</h2>
+      <ul>
+        <li>
+          <Link href="/album/lacm-24244" className="underline">
+            Synthe-Side 01
+          </Link>
+        </li>
+        <li>
+          <Link href="/album/lacm-24245" className="underline">
+            Synthe-Side 02
+          </Link>
+        </li>
+        <li>
+          <Link href="/album/lacm-24246" className="underline">
+            Synthe-Side 03
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">P@NORAMA WING</h2>
       <ul>
         <li>
