@@ -37,8 +37,12 @@ const Album = ({ albums }: any) => {
 
   const album = getAlbum(id);
 
-  class Player extends React.Component {
-    constructor(props) {
+  interface PlayerStateProps {
+    enabled: string;
+  }
+
+  class Player extends React.Component<any, PlayerStateProps> {
+    constructor(props: any) {
       super(props);
       this.state = {
         enabled: "spotify",
