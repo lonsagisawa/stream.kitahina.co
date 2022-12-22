@@ -1,18 +1,53 @@
 import Link from "next/link";
 
 interface headerProps {
-  subTitle?: string;
-  color?: string;
+  brand?: string;
 }
 
-const Header = ({ subTitle }: headerProps) => {
+const BrandTitle = ({ brand }: headerProps) => {
+  if (brand == "allstars") {
+    return (
+      <Link href="/allstars" className="text-3xl ml-3">
+        765PRO ALLSTARS
+      </Link>
+    );
+  } else if (brand == "cinderellagirls") {
+    return (
+      <Link href="/cinderellagirls" className="text-3xl ml-3">
+        Cinderella Girls
+      </Link>
+    );
+  } else if (brand == "millionlive") {
+    return (
+      <Link href="/millionlive" className="text-3xl ml-3">
+        Million Live
+      </Link>
+    );
+  } else if (brand == "sidem") {
+    return (
+      <Link href="/sidem" className="text-3xl ml-3">
+        SideM
+      </Link>
+    );
+  } else if (brand == "shinycolors") {
+    return (
+      <Link href="/shinycolors" className="text-3xl ml-3">
+        Shiny Colors
+      </Link>
+    );
+  } else {
+    return <span className="text-3xl ml-3"></span>;
+  }
+};
+
+const Header = ({ brand }: headerProps) => {
   return (
     <header className="py-4">
       <h1 className="font-black">
         <Link href="/" className="text-4xl">
           STREAM@S
-        </Link>{" "}
-        <span className="text-3xl ml-3">{subTitle}</span>
+        </Link>
+        <BrandTitle brand={brand} />
       </h1>
     </header>
   );
