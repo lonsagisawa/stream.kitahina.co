@@ -25,12 +25,9 @@ const Home = () => {
             <span className="text-gray-300 text-lg"> - 現在対応中です</span>
           </li>
           <li>
-            <span className="text-gray-300">
+            <Link href="/cinderellagirls" className="underline">
               シンデレラガールズ
-              <span className="text-gray-300 text-lg">
-                - 取り扱い予定はございません
-              </span>
-            </span>
+            </Link>
           </li>
           <li>
             <Link href="/millionlive" className="underline">
