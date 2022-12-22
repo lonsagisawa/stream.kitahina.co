@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="container py-4 mx-auto text-sm text-gray-500">
+    <footer className="container px-4 py-4 mx-auto max-w-2xl text-sm text-gray-500">
       <p>
         こちらは有志により作成されたファンサイトです
         <br />
