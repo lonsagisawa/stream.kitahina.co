@@ -40,6 +40,10 @@ const CinderellaGirls = () => {
     );
   };
 
+  interface PlayerStateProps {
+    enabled: string;
+  }
+
   class Player extends React.Component<any, PlayerStateProps> {
     constructor(props: any) {
       super(props);
