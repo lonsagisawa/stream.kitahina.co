@@ -44,7 +44,7 @@ const Header = ({ brand }: headerProps) => {
   return (
     <header className="py-4">
       <h1 className="font-black">
-        <Link href="/" className="text-4xl">
+        <Link href="/" className="text-4xl hover:border-b-2 border-amber-300">
           STREAM@S
         </Link>
         <BrandTitle brand={brand} />
