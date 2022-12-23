@@ -22,7 +22,7 @@ const Home = () => {
         <ul className="text-2xl font-bold">
           <li>
             765PRO ALLSTARS
-            <span className="text-gray-300 text-lg"> - 現在対応中です</span>
+            <span className="text-gray-300 text-base">2023年対応予定</span>
           </li>
           <li>
             <Link href="/cinderellagirls" className="underline">
@@ -30,16 +30,19 @@ const Home = () => {
             </Link>
           </li>
           <li>
-            <Link href="/millionlive" className="underline">
-              ミリオンライブ
-            </Link>
-            <span className="text-gray-300 text-lg"> - 現在対応中です</span>
+            ミリオンライブ
+            <span className="text-base">
+              <a
+                href="https://lantis.jp/news.php?id=1671786192"
+                className="underline"
+              >
+                配信開始次第対応予定
+              </a>
+            </span>
           </li>
           <li>
             SideM
-            <span className="text-gray-300 text-lg">
-              - 対応を検討しています
-            </span>
+            <span className="text-gray-300 text-base">2023年対応予定</span>
           </li>
           <li>
             <Link href="/shinycolors" className="underline">
