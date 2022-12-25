@@ -42,13 +42,18 @@ const BrandTitle = ({ brand }: headerProps) => {
 
 const Header = ({ brand }: headerProps) => {
   return (
-    <header className="py-4">
+    <header className="py-8">
       <h1 className="font-black">
         <Link href="/" className="text-4xl hover:border-b-2 border-amber-300">
           STREAM@S
         </Link>
       </h1>
       <BrandTitle brand={brand} />
+      <p>
+        <Link href="/about" className="underline">
+          STREAM@Sとは？
+        </Link>
+      </p>
     </header>
   );
 };
