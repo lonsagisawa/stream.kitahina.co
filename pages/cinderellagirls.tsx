@@ -150,6 +150,9 @@ const CinderellaGirls = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header brand="cinderellagirls" />
+      <p className="my-2">
+        シンデレラガールズはアルバム単位での開放はなされていないため、日本コロムビアが供給する公式全曲プレイリストを掲載いたします。
+      </p>
       <Player />
     </div>
   );
