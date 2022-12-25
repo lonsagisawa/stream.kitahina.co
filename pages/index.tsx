@@ -12,44 +12,36 @@ const Home = () => {
       </Head>
       <div className="container mx-auto px-4 max-w-2xl">
         <Header />
-        <p className="my-2">
+        <p className="my-4">
           サブスクリプションサービスで楽しむアイドルマスターの音楽
         </p>
-        <h2 className="text-xl font-bold">既知の問題</h2>
-        <ul className="list-disc list-inside my-2">
-          <li>FirefoxでPrime Musicの埋め込みが表示されません</li>
-        </ul>
-        <ul className="text-2xl font-bold">
-          <li>
-            765PRO ALLSTARS
-            <span className="text-gray-300 text-base">2023年対応予定</span>
-          </li>
-          <li>
-            <Link href="/cinderellagirls" className="underline">
-              シンデレラガールズ
-            </Link>
-          </li>
-          <li>
-            ミリオンライブ
-            <span className="text-base">
-              <a
-                href="https://lantis.jp/news.php?id=1671786192"
-                className="underline"
-              >
-                配信開始次第対応予定
-              </a>
-            </span>
-          </li>
-          <li>
-            SideM
-            <span className="text-gray-300 text-base">2023年対応予定</span>
-          </li>
-          <li>
-            <Link href="/shinycolors" className="underline">
-              シャイニーカラーズ
-            </Link>
-          </li>
-        </ul>
+        <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 mb-4 pb-4 border-b border-slate-400 dark:border-slate-600">
+          <Link href="/cinderellagirls">
+            <div className="rounded-lg bg-blue-500 text-white p-4 transition-all shadow hover:bg-blue-400 hover:shadow-blue-200 hover:dark:shadow-blue-800">
+              <h2 className="font-bold text-xl">シンデレラガールズ</h2>
+            </div>
+          </Link>
+          <Link href="/shinycolors">
+            <div className="rounded-lg bg-sky-500 text-white p-4 transition shadow hover:bg-sky-400 hover:shadow-sky-200 hover:dark:shadow-sky-800">
+              <h2 className="font-bold text-xl">シャイニーカラーズ</h2>
+            </div>
+          </Link>
+        </div>
+        <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
+          <div className="rounded-lg bg-rose-500 text-white p-4 transition shadow hover:bg-rose-400 hover:shadow-rose-200 hover:dark:shadow-rose-800">
+            <h2 className="font-bold text-xl">765PRO ALLSTARS</h2>
+            <p className="text-sm">2023年対応予定</p>
+          </div>
+
+          <div className="rounded-lg bg-yellow-500 text-white p-4 transition shadow hover:bg-yellow-400 hover:shadow-yellow-200 hover:dark:shadow-yellow-800">
+            <h2 className="font-bold text-xl">ミリオンライブ</h2>
+            <p className="text-sm">全楽曲開放後対応予定</p>
+          </div>
+          <div className="rounded-lg bg-emerald-500 text-white p-4 transition shadow hover:bg-emerald-400 hover:shadow-emerald-200 hover:dark:shadow-emerald-800">
+            <h2 className="font-bold text-xl">SideM</h2>
+            <p className="text-sm">2023年対応予定</p>
+          </div>
+        </div>
       </div>
     </>
   );
