@@ -15,14 +15,14 @@ const About = () => {
         <Header />
         <h2 className="text-2xl font-bold">STREAM@Sとは？</h2>
         <p className="my-2">
-          2022年11月より順次、アイドルマスターシリーズの楽曲がストリーミングサービスで聴けるようになりました。このWebアプリケーションは、Spotify,
-          Apple Music, Prime
-          Musicの主要3プラットフォーム上でアイドルマスターシリーズの楽曲を見つけやすくし、皆様のプロデュース活動のお役に立てていただくことを目的としています。
+          2022年11月より順次、アイドルマスターシリーズの楽曲がストリーミングサービスで聴けるようになりました。このWebアプリケーションは、アイドルマスターシリーズ各種タイトルの楽曲を主要3プラットフォーム(Spotify,
+          Apple,
+          Amazon)上で見つけやすく・シェアしやすくすることで、皆様のプロデュース活動をより円滑にすることを目指しています。
         </p>
         <h2 className="text-2xl font-bold">既知の問題、仕様</h2>
         <ul>
           <li className="list-disc list-inside my-2">
-            Firefoxで強化型トラッキング保護を厳格モードに設定していると、Prime
+            Firefoxで強化型トラッキング保護を厳格モードに設定していると、Amazon
             Musicの埋め込みが表示されません。
           </li>
         </ul>
