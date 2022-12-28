@@ -41,6 +41,24 @@ const About = () => {
         <p className="my-2">
           フロントエンド、APIともにGitHubに設置しております。プルリクエスト、およびIssueによる貢献を歓迎しております。
         </p>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/lonsagisawa/stream.kitahina.co"
+              className="underline"
+            >
+              https://github.com/lonsagisawa/stream.kitahina.co
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/lonsagisawa/stream-api.kitahina.co"
+              className="underline"
+            >
+              https://github.com/lonsagisawa/stream-api.kitahina.co
+            </a>
+          </li>
+        </ul>
       </div>
     </>
   );
