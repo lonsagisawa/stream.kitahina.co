@@ -18,7 +18,10 @@ const ShinyColors = () => {
       <h2 className="text-xl font-bold">COLORFUL FE@THERS</h2>
       <ul>
         <li>
-          <Link href="/album/laca-15863" className="underline">
+          <Link
+            href="/album/laca-15863"
+            className="underline hover:text-sky-500 transition"
+          >
             COLORFUL FE@THERS -Sol-
           </Link>
         </li>
@@ -26,17 +29,26 @@ const ShinyColors = () => {
       <h2 className="text-xl font-bold">Synthe-Side</h2>
       <ul>
         <li>
-          <Link href="/album/lacm-24244" className="underline">
+          <Link
+            href="/album/lacm-24244"
+            className="underline hover:text-sky-500 transition"
+          >
             Synthe-Side 01
           </Link>
         </li>
         <li>
-          <Link href="/album/lacm-24245" className="underline">
+          <Link
+            href="/album/lacm-24245"
+            className="underline hover:text-sky-500 transition"
+          >
             Synthe-Side 02
           </Link>
         </li>
         <li>
-          <Link href="/album/lacm-24246" className="underline">
+          <Link
+            href="/album/lacm-24246"
+            className="underline hover:text-sky-500 transition"
+          >
             Synthe-Side 03
           </Link>
         </li>
@@ -44,42 +56,66 @@ const ShinyColors = () => {
       <h2 className="text-xl font-bold">P@NORAMA WING</h2>
       <ul>
         <li>
-          <Link href="/album/lacm-24251" className="underline">
+          <Link
+            href="/album/lacm-24251"
+            className="underline hover:text-sky-500 transition"
+          >
             P@NORAMA WING 01
           </Link>
         </li>
         <li>
-          <Link href="/album/lacm-24252" className="underline">
+          <Link
+            href="/album/lacm-24252"
+            className="underline hover:text-sky-500 transition"
+          >
             P@NORAMA WING 02
           </Link>
         </li>
         <li>
-          <Link href="/album/lacm-24253" className="underline">
+          <Link
+            href="/album/lacm-24253"
+            className="underline hover:text-sky-500 transition"
+          >
             P@NORAMA WING 03
           </Link>
         </li>
         <li>
-          <Link href="/album/lacm-24254" className="underline">
+          <Link
+            href="/album/lacm-24254"
+            className="underline hover:text-sky-500 transition"
+          >
             P@NORAMA WING 04
           </Link>
         </li>
         <li>
-          <Link href="/album/lacm-24255" className="underline">
+          <Link
+            href="/album/lacm-24255"
+            className="underline hover:text-sky-500 transition"
+          >
             P@NORAMA WING 05
           </Link>
         </li>
         <li>
-          <Link href="/album/lacm-24256" className="underline">
+          <Link
+            href="/album/lacm-24256"
+            className="underline hover:text-sky-500 transition"
+          >
             P@NORAMA WING 06
           </Link>
         </li>
         <li>
-          <Link href="/album/lacm-24257" className="underline">
+          <Link
+            href="/album/lacm-24257"
+            className="underline hover:text-sky-500 transition"
+          >
             P@NORAMA WING 07
           </Link>
         </li>
         <li>
-          <Link href="/album/lacm-24258" className="underline">
+          <Link
+            href="/album/lacm-24258"
+            className="underline hover:text-sky-500 transition"
+          >
             P@NORAMA WING 08
           </Link>
         </li>

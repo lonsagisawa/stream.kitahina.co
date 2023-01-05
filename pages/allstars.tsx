@@ -15,22 +15,34 @@ const ShinyColors = () => {
       <h2 className="text-xl font-bold">765PRO ALLSTARS+ GRE@TEST BEST!</h2>
       <ul>
         <li>
-          <Link href="/album/cocx-38070" className="underline">
+          <Link
+            href="/album/cocx-38070"
+            className="underline hover:text-rose-500 transition"
+          >
             -THE IDOLM@STER HISTORY-
           </Link>
         </li>
         <li>
-          <Link href="/album/cocx-38071" className="underline">
+          <Link
+            href="/album/cocx-38071"
+            className="underline hover:text-rose-500 transition"
+          >
             -SWEET&SMILE!-
           </Link>
         </li>
         <li>
-          <Link href="/album/cocx-38073" className="underline">
+          <Link
+            href="/album/cocx-38073"
+            className="underline hover:text-rose-500 transition"
+          >
             -COOL&BITTER!-
           </Link>
         </li>
         <li>
-          <Link href="/album/cocx-38075" className="underline">
+          <Link
+            href="/album/cocx-38075"
+            className="underline hover:text-rose-500 transition"
+          >
             -LOVE&PEACE!-
           </Link>
         </li>
