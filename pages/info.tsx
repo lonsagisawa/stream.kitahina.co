@@ -14,7 +14,21 @@ const Info = () => {
       <div className="container mx-auto px-4 max-w-2xl">
         <Header />
         <h1 className="font-black text-3xl my-2">STREAM@Sからのお知らせ</h1>
-        <article>
+        <article className="my-2">
+          <div className="my-2">
+            <h1 className="font-bold text-xl">
+              765PRO ALLSTARSの楽曲を掲載しました
+            </h1>
+            <p className="text-sm">2023年1月5日</p>
+          </div>
+          <p>
+            <Link href="/allstars" className="underline">
+              765PRO ALLSTARSの楽曲掲載を開始いたしました。
+            </Link>
+            「ぷちます！」シリーズの楽曲は、後日掲載予定です。
+          </p>
+        </article>
+        <article className="my-2">
           <div className="my-2">
             <h1 className="font-bold text-xl">
               vα-liv所属バーチャルライバーの楽曲の取り扱いについて
