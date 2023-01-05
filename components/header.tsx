@@ -80,6 +80,12 @@ const Header = ({ brand }: headerProps) => {
         >
           お知らせ
         </Link>
+        <Link
+          href="https://twitter.com/kitahinaCo"
+          className="underline hover:text-amber-400 transition"
+        >
+          Twitter
+        </Link>
       </div>
     </header>
   );
