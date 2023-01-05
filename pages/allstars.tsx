@@ -12,6 +12,13 @@ const ShinyColors = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header brand="allstars" />
+      <p className="mb-4">
+        「ぷちます！」シリーズの楽曲がすでに配信されていますが(
+        <Link href="http://www.fwinc.co.jp/news/79341/" className="underline">
+          http://www.fwinc.co.jp/news/79341/
+        </Link>
+        )、掲載は後日を予定しております。
+      </p>
       <h2 className="text-xl font-bold">765PRO ALLSTARS+ GRE@TEST BEST!</h2>
       <ul>
         <li>
