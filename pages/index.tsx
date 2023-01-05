@@ -17,6 +17,11 @@ const Home = () => {
           サブスクリプションサービスで楽しむアイドルマスターの音楽
         </p>
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 mb-4 pb-4 border-b border-slate-400 dark:border-slate-600">
+          <Link href="/allstars">
+            <div className="rounded-lg bg-rose-500 text-white p-4 transition shadow hover:bg-rose-400 hover:shadow-rose-200 hover:dark:shadow-rose-800">
+              <h2 className="font-bold text-xl">765PRO ALLSTARS</h2>
+            </div>
+          </Link>
           <Link href="/cinderellagirls">
             <div className="rounded-lg bg-blue-500 text-white p-4 transition-all shadow hover:bg-blue-400 hover:shadow-blue-200 hover:dark:shadow-blue-800">
               <h2 className="font-bold text-xl">シンデレラガールズ</h2>
@@ -29,11 +34,6 @@ const Home = () => {
           </Link>
         </div>
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
-          <div className="rounded-lg bg-rose-500 text-white p-4 transition shadow hover:bg-rose-400 hover:shadow-rose-200 hover:dark:shadow-rose-800">
-            <h2 className="font-bold text-xl">765PRO ALLSTARS</h2>
-            <p className="text-sm">2023年対応予定</p>
-          </div>
-
           <div className="rounded-lg bg-yellow-500 text-white p-4 transition shadow hover:bg-yellow-400 hover:shadow-yellow-200 hover:dark:shadow-yellow-800">
             <h2 className="font-bold text-xl">ミリオンライブ</h2>
             <p className="text-sm">全楽曲開放後対応予定</p>
