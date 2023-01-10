@@ -33,8 +33,34 @@ const MillionLive = () => {
       <h2 className="text-xl font-bold">THE@TER BOOST</h2>
       <h2 className="text-xl font-bold">THE@TER CHALLENGE</h2>
 
-      <h1 className="text-2xl font-bold">MILLION WORLD</h1>
+      <h1 className="text-2xl font-bold">OTHER</h1>
       <h2 className="text-xl font-bold">MILLION RADIO</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/lacm-14234"
+            className="underline hover:text-yellow-500 transition"
+          >
+            U・N・M・E・I ライブ
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14506"
+            className="underline hover:text-yellow-500 transition"
+          >
+            ターンオンタイム！
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14961"
+            className="underline hover:text-yellow-500 transition"
+          >
+            ENDLESS TOUR
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">OTHER</h2>
     </div>
   );
