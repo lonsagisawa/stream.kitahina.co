@@ -19,11 +19,19 @@ const Player = ({ spotify, applemusic, amazon }: PlayerProps) => {
   class Player extends React.Component<any, PlayerStateProps> {
     constructor(props: any) {
       super(props);
-      this.state = {
-        spotifyEnabled: true,
-        applemusicEnabled: false,
-        amazonEnabled: false,
-      };
+      if (spotify == undefined) {
+        this.state = {
+          spotifyEnabled: false,
+          applemusicEnabled: true,
+          amazonEnabled: false,
+        };
+      } else {
+        this.state = {
+          spotifyEnabled: true,
+          applemusicEnabled: false,
+          amazonEnabled: false,
+        };
+      }
     }
     enableSpotify = () => {
       this.setState({
