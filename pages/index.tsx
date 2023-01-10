@@ -36,7 +36,7 @@ const Home = () => {
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
           <div className="rounded-lg bg-yellow-500 text-white p-4 transition shadow hover:bg-yellow-400 hover:shadow-yellow-200 hover:dark:shadow-yellow-800">
             <h2 className="font-bold text-xl">ミリオンライブ</h2>
-            <p className="text-sm">全楽曲開放後対応予定</p>
+            <p className="text-sm">近日対応予定</p>
           </div>
           <div className="rounded-lg bg-emerald-500 text-white p-4 transition shadow hover:bg-emerald-400 hover:shadow-emerald-200 hover:dark:shadow-emerald-800">
             <h2 className="font-bold text-xl">SideM</h2>
