@@ -27,6 +27,12 @@ const Home = () => {
               <h2 className="font-bold text-xl">シンデレラガールズ</h2>
             </div>
           </Link>
+          <Link href="/millionlive">
+            <div className="rounded-lg bg-yellow-500 text-white p-4 transition shadow hover:bg-yellow-400 hover:shadow-yellow-200 hover:dark:shadow-yellow-800">
+              <h2 className="font-bold text-xl">ミリオンライブ</h2>
+              <p className="text-sm">一部楽曲のみ・順次追加予定</p>
+            </div>
+          </Link>
           <Link href="/shinycolors">
             <div className="rounded-lg bg-sky-500 text-white p-4 transition shadow hover:bg-sky-400 hover:shadow-sky-200 hover:dark:shadow-sky-800">
               <h2 className="font-bold text-xl">シャイニーカラーズ</h2>
@@ -34,10 +40,6 @@ const Home = () => {
           </Link>
         </div>
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
-          <div className="rounded-lg bg-yellow-500 text-white p-4 transition shadow hover:bg-yellow-400 hover:shadow-yellow-200 hover:dark:shadow-yellow-800">
-            <h2 className="font-bold text-xl">ミリオンライブ</h2>
-            <p className="text-sm">近日対応予定</p>
-          </div>
           <div className="rounded-lg bg-emerald-500 text-white p-4 transition shadow hover:bg-emerald-400 hover:shadow-emerald-200 hover:dark:shadow-emerald-800">
             <h2 className="font-bold text-xl">SideM</h2>
             <p className="text-sm">2023年対応予定</p>
