@@ -33,7 +33,7 @@ const ShinyColors = () => {
             href="/album/lacm-24244"
             className="underline hover:text-sky-500 transition"
           >
-            Synthe-Side 01
+            01 アンティーカ × ストレイライト
           </Link>
         </li>
         <li>
@@ -41,7 +41,7 @@ const ShinyColors = () => {
             href="/album/lacm-24245"
             className="underline hover:text-sky-500 transition"
           >
-            Synthe-Side 02
+            02 放課後クライマックスガールズ × ノクチル
           </Link>
         </li>
         <li>
@@ -49,7 +49,7 @@ const ShinyColors = () => {
             href="/album/lacm-24246"
             className="underline hover:text-sky-500 transition"
           >
-            Synthe-Side 03
+            03 イルミネーションスターズ × アルストロメリア × シーズ
           </Link>
         </li>
       </ul>
@@ -60,7 +60,7 @@ const ShinyColors = () => {
             href="/album/lacm-24251"
             className="underline hover:text-sky-500 transition"
           >
-            P@NORAMA WING 01
+            01 シャイニーカラーズ
           </Link>
         </li>
         <li>
@@ -68,7 +68,7 @@ const ShinyColors = () => {
             href="/album/lacm-24252"
             className="underline hover:text-sky-500 transition"
           >
-            P@NORAMA WING 02
+            02 イルミネーションスターズ
           </Link>
         </li>
         <li>
@@ -76,7 +76,7 @@ const ShinyColors = () => {
             href="/album/lacm-24253"
             className="underline hover:text-sky-500 transition"
           >
-            P@NORAMA WING 03
+            03 アンティーカ
           </Link>
         </li>
         <li>
@@ -84,7 +84,7 @@ const ShinyColors = () => {
             href="/album/lacm-24254"
             className="underline hover:text-sky-500 transition"
           >
-            P@NORAMA WING 04
+            04 放課後クライマックスガールズ
           </Link>
         </li>
         <li>
@@ -92,7 +92,7 @@ const ShinyColors = () => {
             href="/album/lacm-24255"
             className="underline hover:text-sky-500 transition"
           >
-            P@NORAMA WING 05
+            05 アルストロメリア
           </Link>
         </li>
         <li>
@@ -100,7 +100,7 @@ const ShinyColors = () => {
             href="/album/lacm-24256"
             className="underline hover:text-sky-500 transition"
           >
-            P@NORAMA WING 06
+            06 ストレイライト
           </Link>
         </li>
         <li>
@@ -108,7 +108,7 @@ const ShinyColors = () => {
             href="/album/lacm-24257"
             className="underline hover:text-sky-500 transition"
           >
-            P@NORAMA WING 07
+            07 ノクチル
           </Link>
         </li>
         <li>
@@ -116,7 +116,7 @@ const ShinyColors = () => {
             href="/album/lacm-24258"
             className="underline hover:text-sky-500 transition"
           >
-            P@NORAMA WING 08
+            08 シーズ
           </Link>
         </li>
       </ul>
