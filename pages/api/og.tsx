@@ -1,7 +1,7 @@
 import { ImageResponse } from "@vercel/og";
 
 export const config = {
-  runtime: "edge",
+  runtime: "experimental-edge",
 };
 
 export default function handler() {
@@ -19,7 +19,7 @@ export default function handler() {
           justifyContent: "center",
         }}
       >
-        Hello world!
+        STREAM@S
       </div>
     ),
     {
