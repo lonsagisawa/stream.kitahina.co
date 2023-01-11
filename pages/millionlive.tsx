@@ -12,6 +12,19 @@ const MillionLive = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header brand="millionlive" />
+      <p>
+        おしらせ:{" "}
+        <a
+          href="https://www.lantis.jp/news.php?id=1671786192"
+          target="_blank"
+          rel="noreferrer"
+          className="underline hover:text-yellow-500 transition"
+        >
+          現在ミリオンライブの楽曲はプラットフォームによって配信状況が異なります。
+        </a>
+        <br />
+        Lantis側での配信開始の告知が行われ次第、全楽曲・3プラットフォームでの掲載を行います。
+      </p>
       <h1 className="text-2xl font-bold">LIVE THE@TER</h1>
       <h2 className="text-xl font-bold">LIVE THE@TER PERFORMANCE</h2>
       <h2 className="text-xl font-bold">LIVE THE@TER HARMONY</h2>
@@ -21,6 +34,152 @@ const MillionLive = () => {
       <h1 className="text-2xl font-bold">THE@TER DAYS</h1>
       <h2 className="text-xl font-bold">MILLION THE@TER GENERATION</h2>
       <h2 className="text-xl font-bold">MILLION THE@TER WAVE</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/lacm-14891"
+            className="underline hover:text-yellow-500 transition"
+          >
+            01 Flyers!!!
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14892"
+            className="underline hover:text-yellow-500 transition"
+          >
+            02 Chrono-Lexica
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14893"
+            className="underline hover:text-yellow-500 transition"
+          >
+            03 Xs
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14894"
+            className="underline hover:text-yellow-500 transition"
+          >
+            04 Sherry&apos;n Cherry
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14895"
+            className="underline hover:text-yellow-500 transition"
+          >
+            05 ARCANA
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14896"
+            className="underline hover:text-yellow-500 transition"
+          >
+            06 花咲夜
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14897"
+            className="underline hover:text-yellow-500 transition"
+          >
+            07 Jus-2-Mint
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14898"
+            className="underline hover:text-yellow-500 transition"
+          >
+            08 miraclesonic★expassion
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14899"
+            className="underline hover:text-yellow-500 transition"
+          >
+            09 Fleuranges
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14900"
+            className="underline hover:text-yellow-500 transition"
+          >
+            10 Glow Map
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14901"
+            className="underline hover:text-yellow-500 transition"
+          >
+            11 オペラセリア・煌輝座
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14902"
+            className="underline hover:text-yellow-500 transition"
+          >
+            12 ダイヤモンドダイバー◇
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14903"
+            className="underline hover:text-yellow-500 transition"
+          >
+            13 TIntMe!
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14904"
+            className="underline hover:text-yellow-500 transition"
+          >
+            14 TRICK&amp;TREAT
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14905"
+            className="underline hover:text-yellow-500 transition"
+          >
+            15 chicAAmor
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-24106"
+            className="underline hover:text-yellow-500 transition"
+          >
+            16 ≡君彩≡
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-24107"
+            className="underline hover:text-yellow-500 transition"
+          >
+            17 ARMooo
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-24108"
+            className="underline hover:text-yellow-500 transition"
+          >
+            18 ストロベリーポップムーン
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">MILLION THE@TER SEASON</h2>
       <h2 className="text-xl font-bold">MILLION THE@TER VARIETY</h2>
 
