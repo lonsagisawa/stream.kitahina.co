@@ -24,6 +24,8 @@ const MillionLive = () => {
         </a>
         <br />
         Lantis側での配信開始の告知が行われ次第、全楽曲・3プラットフォームでの掲載を行います。
+        <br />
+        また現時点で掲載されている楽曲はごく一部となります。順次楽曲データの拡充・掲載を進めてまいります。
       </p>
       <h1 className="text-2xl font-bold">LIVE THE@TER</h1>
       <h2 className="text-xl font-bold">LIVE THE@TER PERFORMANCE</h2>
