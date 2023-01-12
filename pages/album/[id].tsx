@@ -45,6 +45,11 @@ const Album = ({ album }: any) => {
         <link rel="canonical" href={ogp.url} />
         <meta property="og:title" content={album.data.name} />
         <meta property="og:image" content={ogp.img} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@kitahinaCo" />
+        <meta name="twitter:creator" content="@kitahinaCo" />
+        <meta name="twitter:title" content={album.data.name} />
+        <meta name="twitter:image" content={ogp.img} />
       </Head>
       <Header brand={album.data.series} />
       <div>
