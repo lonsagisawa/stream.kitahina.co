@@ -29,6 +29,112 @@ const MillionLive = () => {
       </p>
       <h1 className="text-2xl font-bold">LIVE THE@TER</h1>
       <h2 className="text-xl font-bold">LIVE THE@TER PERFORMANCE</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/lacm-14080"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 01
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15300"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 02
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15313"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 03
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15314"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 04
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15315"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 05
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15316"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 06
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15317"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 07
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15318"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 08
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15319"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 09
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15320"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 10
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15321"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 11
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15322"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 12
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15323"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER PERFORMANCE 13
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">LIVE THE@TER HARMONY</h2>
       <h2 className="text-xl font-bold">LIVE THE@TER DREAMERS</h2>
       <h2 className="text-xl font-bold">LIVE THE@TER FORWARD</h2>
