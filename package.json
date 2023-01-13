@@ -16,6 +16,7 @@
     "@vercel/og": "^0.0.25",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
+    "fuse.js": "^6.6.2",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-bootstrap-icons": "^1.10.2",
