@@ -295,6 +295,88 @@ const MillionLive = () => {
       <h1 className="text-2xl font-bold">M@STER SPARKLE</h1>
       <h2 className="text-xl font-bold">M@STER SPARKLE</h2>
       <h2 className="text-xl font-bold">M@STER SPARKLE2</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/laca-15901"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE2 01
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15902"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE2 02
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15903"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE2 03
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15904"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE2 04
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15905"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE2 05
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15906"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE2 06
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15907"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE2 07
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15908"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE2 08
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15909"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE2 09
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15910"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE2 10
+          </Link>
+        </li>
+      </ul>
 
       <h1 className="text-2xl font-bold">THE@TER A/B/C</h1>
       <h2 className="text-xl font-bold">THE@TER ACTIVITIES</h2>
