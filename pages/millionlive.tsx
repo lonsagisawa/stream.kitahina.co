@@ -142,6 +142,152 @@ const MillionLive = () => {
 
       <h1 className="text-2xl font-bold">THE@TER DAYS</h1>
       <h2 className="text-xl font-bold">MILLION THE@TER GENERATION</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/lacm-14631"
+            className="underline hover:text-yellow-500 transition"
+          >
+            01 Brand New Theater!
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14632"
+            className="underline hover:text-yellow-500 transition"
+          >
+            02 フェアリースターズ
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14633"
+            className="underline hover:text-yellow-500 transition"
+          >
+            03 エンジェルスターズ
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14634"
+            className="underline hover:text-yellow-500 transition"
+          >
+            04 プリンセススターズ
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14635"
+            className="underline hover:text-yellow-500 transition"
+          >
+            05 夜想令嬢 -GRAC&E NOCTURNE-
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14636"
+            className="underline hover:text-yellow-500 transition"
+          >
+            06 Cleasky
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14637"
+            className="underline hover:text-yellow-500 transition"
+          >
+            07 トゥインクルリズム
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14638"
+            className="underline hover:text-yellow-500 transition"
+          >
+            08 EScape
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14639"
+            className="underline hover:text-yellow-500 transition"
+          >
+            09 4Luxury
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14640"
+            className="underline hover:text-yellow-500 transition"
+          >
+            10 閃光 HANABI団
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14641"
+            className="underline hover:text-yellow-500 transition"
+          >
+            11 UNION!!
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14642"
+            className="underline hover:text-yellow-500 transition"
+          >
+            12 D/Zeal
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14823"
+            className="underline hover:text-yellow-500 transition"
+          >
+            13 りるきゃん ～3 little candy～
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14824"
+            className="underline hover:text-yellow-500 transition"
+          >
+            14 Charlotte・Charlotte
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14825"
+            className="underline hover:text-yellow-500 transition"
+          >
+            15 Jelly PoP Beans
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14826"
+            className="underline hover:text-yellow-500 transition"
+          >
+            16 ピコピコプラネッツ
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14827"
+            className="underline hover:text-yellow-500 transition"
+          >
+            17 STAR ELEMENTS
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14828"
+            className="underline hover:text-yellow-500 transition"
+          >
+            18 765PRO ALLSTARS
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">MILLION THE@TER WAVE</h2>
       <ul>
         <li>
