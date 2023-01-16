@@ -548,6 +548,14 @@ const MillionLive = () => {
             SHADE OF SPADE
           </Link>
         </li>
+        <li>
+          <Link
+            href="/album/yume_ni_kakeru_rainbow"
+            className="underline hover:text-yellow-500 transition"
+          >
+            夢にかけるRainbow (Brand New Ver.)
+          </Link>
+        </li>
       </ul>
       <h2 className="text-xl font-bold">MILLION THE@TER VARIETY</h2>
 
