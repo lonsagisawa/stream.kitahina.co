@@ -139,6 +139,69 @@ const MillionLive = () => {
       <h2 className="text-xl font-bold">LIVE THE@TER HARMONY</h2>
       <h2 className="text-xl font-bold">LIVE THE@TER DREAMERS</h2>
       <h2 className="text-xl font-bold">LIVE THE@TER FORWARD</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/laca-15611"
+            className="underline hover:text-yellow-500 transition"
+          >
+            01 Sunshine Rhythm
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15612"
+            className="underline hover:text-yellow-500 transition"
+          >
+            02 BlueMoon Harmony
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15613"
+            className="underline hover:text-yellow-500 transition"
+          >
+            03 Starlight Melody
+          </Link>
+        </li>
+      </ul>
+      <h2 className="text-xl font-bold">
+        LIVE THE@TER FORWARD - Brand New Ver.
+      </h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/sun_rhythm_orchestra"
+            className="underline hover:text-yellow-500 transition"
+          >
+            サンリズム・オーケストラ (Brand New Ver.)
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/brave_harmony"
+            className="underline hover:text-yellow-500 transition"
+          >
+            brave HARMONY (Brand New Ver.)
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/starry_melody"
+            className="underline hover:text-yellow-500 transition"
+          >
+            Starry Melody (Brand New Ver.)
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/refrain_kiss"
+            className="underline hover:text-yellow-500 transition"
+          >
+            リフレインキス (Brand New Ver.)
+          </Link>
+        </li>
+      </ul>
 
       <h1 className="text-2xl font-bold">THE@TER DAYS</h1>
       <h2 className="text-xl font-bold">MILLION THE@TER GENERATION</h2>
@@ -436,6 +499,56 @@ const MillionLive = () => {
         </li>
       </ul>
       <h2 className="text-xl font-bold">MILLION THE@TER SEASON</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/lacm-24151"
+            className="underline hover:text-yellow-500 transition"
+          >
+            Harmony 4 You
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15916"
+            className="underline hover:text-yellow-500 transition"
+          >
+            BRIGHT DIAMOND
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15935"
+            className="underline hover:text-yellow-500 transition"
+          >
+            CLEVER CLOVER
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15978"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LOVERS HEART
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-24294"
+            className="underline hover:text-yellow-500 transition"
+          >
+            夢にかけるRainbow
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-25019"
+            className="underline hover:text-yellow-500 transition"
+          >
+            SHADE OF SPADE
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">MILLION THE@TER VARIETY</h2>
 
       <h1 className="text-2xl font-bold">M@STER SPARKLE</h1>
