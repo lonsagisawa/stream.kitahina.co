@@ -558,6 +558,25 @@ const MillionLive = () => {
         </li>
       </ul>
       <h2 className="text-xl font-bold">MILLION THE@TER VARIETY</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/lacm-24236"
+            className="underline hover:text-yellow-500 transition"
+          >
+            MILLION THE@TER VARIETY 01
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            href="/album/lacm-24329"
+            className="underline hover:text-yellow-500 transition"
+          >
+            MILLION THE@TER VARIETY 02
+          </Link>
+        </li>
+      </ul>
 
       <h1 className="text-2xl font-bold">M@STER SPARKLE</h1>
       <h2 className="text-xl font-bold">M@STER SPARKLE</h2>
