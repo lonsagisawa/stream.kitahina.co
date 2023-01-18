@@ -220,6 +220,56 @@ const MillionLive = () => {
         </li>
       </ul>
       <h2 className="text-xl font-bold">LIVE THE@TER DREAMERS</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/lacm-14411"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER DREAMERS 01 Dreaming!
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15522"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER DREAMERS 02
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15523"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER DREAMERS 03
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15524"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER DREAMERS 04
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15525"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER DREAMERS 05
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15526"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER DREAMERS 06
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">LIVE THE@TER FORWARD</h2>
       <ul>
         <li>
