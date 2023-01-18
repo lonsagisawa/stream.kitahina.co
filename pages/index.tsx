@@ -88,7 +88,6 @@ const Home = ({ data }: any) => {
           <Link href="/millionlive">
             <div className="rounded-lg bg-yellow-500 text-white p-4 transition shadow hover:bg-yellow-400 hover:shadow-yellow-200 hover:dark:shadow-yellow-800">
               <h2 className="font-bold text-xl">ミリオンライブ</h2>
-              <p className="text-sm">一部楽曲のみ・順次追加予定</p>
             </div>
           </Link>
           <Link href="/shinycolors">
