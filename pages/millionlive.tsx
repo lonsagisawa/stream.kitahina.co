@@ -13,20 +13,9 @@ const MillionLive = () => {
       </Head>
       <Header brand="millionlive" />
       <p>
-        おしらせ:{" "}
-        <a
-          href="https://www.lantis.jp/news.php?id=1671786192"
-          target="_blank"
-          rel="noreferrer"
-          className="underline hover:text-yellow-500 transition"
-        >
-          現在ミリオンライブの楽曲はプラットフォームによって配信状況が異なります。
-        </a>
-        <br />
-        2023年1月13日時点でAmazon{" "}
-        Musicでの配信開始が告知されましたが、一部の楽曲が配信されていないことを確認しております。
-        <br />
-        また現時点で掲載されている楽曲はごく一部となります。順次楽曲データの拡充・掲載を進めてまいります。
+        おしらせ: 2023年1月18日現在、Apple Musicにおいて
+        <code>MILLION THE@TER WAVE 01 Flyers!!!</code>
+        が配信されていない事象を確認しています。
       </p>
       <h1 className="text-2xl font-bold">LIVE THE@TER</h1>
       <h2 className="text-xl font-bold">LIVE THE@TER PERFORMANCE</h2>
