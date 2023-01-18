@@ -647,8 +647,86 @@ const MillionLive = () => {
 
       <h1 className="text-2xl font-bold">THE@TER A/B/C</h1>
       <h2 className="text-xl font-bold">THE@TER ACTIVITIES</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/lacm-14531"
+            className="underline hover:text-yellow-500 transition"
+          >
+            THE IDOLM@STER THE@TER ACTIVITIES 01
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14532"
+            className="underline hover:text-yellow-500 transition"
+          >
+            THE IDOLM@STER THE@TER ACTIVITIES 02
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14533"
+            className="underline hover:text-yellow-500 transition"
+          >
+            THE IDOLM@STER THE@TER ACTIVITIES 03
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">THE@TER BOOST</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/lacm-14811"
+            className="underline hover:text-yellow-500 transition"
+          >
+            THE IDOLM@STER THE@TER BOOST 01
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14812"
+            className="underline hover:text-yellow-500 transition"
+          >
+            THE IDOLM@STER THE@TER BOOST 02
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14813"
+            className="underline hover:text-yellow-500 transition"
+          >
+            THE IDOLM@STER THE@TER BOOST 03
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">THE@TER CHALLENGE</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/lacm-14947"
+            className="underline hover:text-yellow-500 transition"
+          >
+            THE IDOLM@STER THE@TER CHALLENGE 01
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14948"
+            className="underline hover:text-yellow-500 transition"
+          >
+            THE IDOLM@STER THE@TER CHALLENGE 02
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-14949"
+            className="underline hover:text-yellow-500 transition"
+          >
+            THE IDOLM@STER THE@TER CHALLENGE 03
+          </Link>
+        </li>
+      </ul>
 
       <h1 className="text-2xl font-bold">OTHER</h1>
       <h2 className="text-xl font-bold">MILLION RADIO</h2>
