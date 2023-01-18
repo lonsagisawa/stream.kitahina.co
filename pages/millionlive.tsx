@@ -137,6 +137,88 @@ const MillionLive = () => {
         </li>
       </ul>
       <h2 className="text-xl font-bold">LIVE THE@TER HARMONY</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/laca-15431"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER HARMONY 01
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15432"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER HARMONY 02
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15433"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER HARMONY 03
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15434"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER HARMONY 04
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15435"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER HARMONY 05
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15436"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER HARMONY 06
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15437"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER HARMONY 07
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15438"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER HARMONY 08
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15439"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER HARMONY 09
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15440"
+            className="underline hover:text-yellow-500 transition"
+          >
+            LIVE THE@TER HARMONY 10
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">LIVE THE@TER DREAMERS</h2>
       <h2 className="text-xl font-bold">LIVE THE@TER FORWARD</h2>
       <ul>
