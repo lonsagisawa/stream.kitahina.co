@@ -948,6 +948,14 @@ const MillionLive = () => {
             VOY@GER - ミリオンライブ！盤
           </Link>
         </li>
+        <li>
+          <Link
+            href="/album/clover_days"
+            className="underline hover:text-yellow-500 transition"
+          >
+            Clover Days
+          </Link>
+        </li>
       </ul>
     </div>
   );
