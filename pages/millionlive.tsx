@@ -712,6 +712,72 @@ const MillionLive = () => {
 
       <h1 className="text-2xl font-bold">M@STER SPARKLE</h1>
       <h2 className="text-xl font-bold">M@STER SPARKLE</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/laca-15671"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE 01
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15672"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE 02
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15673"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE 03
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15674"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE 04
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15675"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE 05
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15676"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE 06
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15677"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE 07
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/laca-15678"
+            className="underline hover:text-yellow-500 transition"
+          >
+            M@STER SPARKLE 08
+          </Link>
+        </li>
+      </ul>
       <h2 className="text-xl font-bold">M@STER SPARKLE2</h2>
       <ul>
         <li>
