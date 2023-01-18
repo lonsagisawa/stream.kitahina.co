@@ -728,8 +728,7 @@ const MillionLive = () => {
         </li>
       </ul>
 
-      <h1 className="text-2xl font-bold">OTHER</h1>
-      <h2 className="text-xl font-bold">MILLION RADIO</h2>
+      <h1 className="text-2xl font-bold">MILLION RADIO</h1>
       <ul>
         <li>
           <Link
@@ -756,7 +755,49 @@ const MillionLive = () => {
           </Link>
         </li>
       </ul>
-      <h2 className="text-xl font-bold">OTHER</h2>
+      <h1 className="text-2xl font-bold">OTHER</h1>
+      <ul>
+        <li>
+          <Link
+            href="/album/gessan"
+            className="underline hover:text-yellow-500 transition"
+          >
+            君との明日を願うから
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-24025"
+            className="underline hover:text-yellow-500 transition"
+          >
+            なんどでも笑おう - ミリオンライブ！盤
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-24004"
+            className="underline hover:text-yellow-500 transition"
+          >
+            ZWEIGLANZ アライアンス・スターダスト
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-24159"
+            className="underline hover:text-yellow-500 transition"
+          >
+            聖ミリオン女学園
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-24163"
+            className="underline hover:text-yellow-500 transition"
+          >
+            VOY@GER - ミリオンライブ！盤
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
