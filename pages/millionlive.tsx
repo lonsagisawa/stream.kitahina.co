@@ -960,6 +960,22 @@ const MillionLive = () => {
       <ul>
         <li>
           <Link
+            href="/album/moiw2014"
+            className="underline hover:text-yellow-500 transition"
+          >
+            IDOL POWER RAINBOW
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/moiw2015"
+            className="underline hover:text-yellow-500 transition"
+          >
+            アイ MUST GO!
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/album/gessan"
             className="underline hover:text-yellow-500 transition"
           >
@@ -1004,6 +1020,14 @@ const MillionLive = () => {
             className="underline hover:text-yellow-500 transition"
           >
             Clover Days
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/moiw2023"
+            className="underline hover:text-yellow-500 transition"
+          >
+            CRYST@LOUD
           </Link>
         </li>
       </ul>

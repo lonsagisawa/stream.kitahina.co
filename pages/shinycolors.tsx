@@ -120,6 +120,17 @@ const ShinyColors = () => {
           </Link>
         </li>
       </ul>
+      <h2 className="text-xl font-bold">OTHER</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/moiw2023"
+            className="underline hover:text-sky-500 transition"
+          >
+            CRYST@LOUD
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };

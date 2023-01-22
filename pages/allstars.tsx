@@ -54,6 +54,33 @@ const ShinyColors = () => {
           </Link>
         </li>
       </ul>
+      <h2 className="text-xl font-bold">M@STERS OF IDOL WORLD!!</h2>
+      <ul>
+        <li>
+          <Link
+            href="/album/moiw2014"
+            className="underline hover:text-rose-500 transition"
+          >
+            IDOL POWER RAINBOW
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/moiw2015"
+            className="underline hover:text-rose-500 transition"
+          >
+            アイ MUST GO!
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/moiw2023"
+            className="underline hover:text-rose-500 transition"
+          >
+            CRYST@LOUD
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
