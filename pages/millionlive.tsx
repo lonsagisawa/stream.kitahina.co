@@ -12,11 +12,6 @@ const MillionLive = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header brand="millionlive" />
-      <p>
-        おしらせ: 2023年1月18日現在、Apple Musicにおいて
-        <code>MILLION THE@TER WAVE 01 Flyers!!!</code>
-        が配信されていない事象を確認しています。
-      </p>
       <h1 className="text-2xl font-bold">LIVE THE@TER</h1>
       <h2 className="text-xl font-bold">LIVE THE@TER PERFORMANCE</h2>
       <ul>
