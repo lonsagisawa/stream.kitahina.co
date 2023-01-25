@@ -110,9 +110,9 @@ const Player = ({ spotify, applemusic, amazon }: PlayerProps) => {
               </button>
             )}
           </div>
-          {this.state.spotifyEnabled ? <Spotify id={spotify} /> : null}
-          {this.state.applemusicEnabled ? <AppleMusic id={applemusic} /> : null}
-          {this.state.amazonEnabled ? <Amazon id={amazon} /> : null}
+          {this.state.spotifyEnabled && <Spotify id={spotify} />}
+          {this.state.applemusicEnabled && <AppleMusic id={applemusic} />}
+          {this.state.amazonEnabled && <Amazon id={amazon} />}
         </>
       );
     }
