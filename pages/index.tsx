@@ -46,14 +46,16 @@ const Home = ({ data }: any) => {
           サブスクリプションサービスで楽しむアイドルマスターの音楽
         </p>
         <form className="mb-4">
-          <input
-            type="search"
-            id="query"
-            placeholder="検索"
-            className="w-full py-3 px-6 rounded-full shadow bg-slate-50 dark:bg-slate-700"
-            value={searchQuery}
-            onChange={(event) => handleSearch(event.target.value)}
-          />
+          <div className="w-full rounded-full shadow bg-slate-50 dark:bg-slate-700">
+            <input
+              type="search"
+              id="query"
+              placeholder="検索"
+              className="w-full py-3 px-6 rounded-full bg-transparent"
+              value={searchQuery}
+              onChange={(event) => handleSearch(event.target.value)}
+            />
+          </div>
         </form>
         {searchResults.length > 0 && (
           <>
