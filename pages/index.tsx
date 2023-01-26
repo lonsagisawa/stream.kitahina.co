@@ -4,8 +4,11 @@ import Head from "next/head";
 import Link from "next/link";
 import Fuse from "fuse.js";
 
+const API_ENDPOINT =
+  process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
+
 export const getStaticProps = async () => {
-  const res = await fetch("https://stream-api.kitahina.co/album");
+  const res = await fetch(`${API_ENDPOINT}/album`);
   const resJson = await res.json();
   const data = resJson.data;
 
