@@ -5,9 +5,12 @@ import Header from "../../components/header";
 import Player from "../../components/player";
 import Tweet from "../../components/tweet";
 
+const API_ENDPOINT =
+  process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
+
 export const getStaticPaths: GetStaticPaths = async () => {
   // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
-  const res = await fetch("https://stream-api.kitahina.co/album");
+  const res = await fetch(`${API_ENDPOINT}/album`);
   const albums = await res.json();
 
   const paths = albums.data.map((data: { id: string }) => ({
@@ -19,7 +22,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context?.params?.id;
-  const res = await fetch(`https://stream-api.kitahina.co/album/${id}`);
+  const res = await fetch(`${API_ENDPOINT}/album/${id}`);
   const album = await res.json();
 
   return {
