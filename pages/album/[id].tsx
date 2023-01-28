@@ -54,7 +54,7 @@ const Album = ({ album }: any) => {
         <meta name="twitter:title" content={album.data.name} />
         <meta name="twitter:image" content={ogp.img} />
       </Head>
-      <Header brand={album.data.series} />
+      <Header brand={album.data.brand} />
       <div>
         <h2 className="text-xl font-bold mb-2">{album.data.name}</h2>
         <Tweet
