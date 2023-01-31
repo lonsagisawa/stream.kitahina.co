@@ -124,6 +124,14 @@ const ShinyColors = () => {
       <ul>
         <li>
           <Link
+            href="/album/lzc-2059"
+            className="underline hover:text-sky-500 transition"
+          >
+            神様は死んだ、って
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/album/moiw2023"
             className="underline hover:text-sky-500 transition"
           >
