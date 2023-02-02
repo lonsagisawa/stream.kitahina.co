@@ -3,6 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Header from "../../components/header";
 import Player from "../../components/player";
+import Share from "../../components/share";
 
 const API_ENDPOINT =
   process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
@@ -56,6 +57,7 @@ const Album = ({ album }: any) => {
       <Header brand={album.data.brand} />
       <div>
         <h2 className="text-xl font-bold mb-2">{album.data.name}</h2>
+        <Share url={ogp.url} title={album.data.name} />
         <Player
           spotify={album.data.spotify}
           applemusic={album.data.applemusic}
