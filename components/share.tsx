@@ -11,17 +11,20 @@ const Share = ({ url, title }: any) => {
     try {
       await navigator.share(data);
     } catch (err) {
-      alert(
-        "シェア機能はこの環境には対応しておりません。お手数ですが、URLのコピーをご利用ください。"
-      );
+      alert("シェアがキャンセルされたか、シェアに対応していない環境です。");
     }
   };
 
   return (
-    <button onClick={shareEvent} className="px-4 py-2 rounded-xl bg-slate-500">
-      <ShareFill className="inline-block mr-1" />
-      シェアする
-    </button>
+    <>
+      <button
+        onClick={shareEvent}
+        className="px-4 py-2 rounded-xl bg-slate-500 hover:bg-slate-400 text-white shadow dark:shadow-none transition"
+      >
+        <ShareFill className="inline-block mr-1" />
+        シェア
+      </button>
+    </>
   );
 };
 
