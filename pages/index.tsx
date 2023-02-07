@@ -26,7 +26,7 @@ const Home = ({ data }: any) => {
     findAllMatches: true,
     threshold: 0.4,
     ignoreLocation: true,
-    keys: ["name"],
+    keys: ["name", "songs"],
   });
 
   const handleSearch = (searchQuery: string) => {
