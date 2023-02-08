@@ -59,9 +59,9 @@ const Album = ({ album }: any) => {
         <h2 className="text-xl font-bold mb-2">{album.data.name}</h2>
         <Share url={ogp.url} title={album.data.name} />
         <Player
-          spotify={album.data.spotify}
-          applemusic={album.data.applemusic}
-          amazon={album.data.amazon}
+          spotify={album.data.platform.spotify}
+          applemusic={album.data.platform.applemusic}
+          amazon={album.data.platform.amazon}
         />
       </div>
     </div>
