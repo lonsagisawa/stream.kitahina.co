@@ -1,8 +1,127 @@
 import Header from "../components/header";
 import Head from "next/head";
 import Link from "next/link";
+import Album from "./album/[id]";
 
-const MillionLive = () => {
+const API_ENDPOINT =
+  process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
+
+export const getStaticProps = async () => {
+  const res = await fetch(`${API_ENDPOINT}/album/millionlive`);
+  const resJson = await res.json();
+  const data = resJson.data;
+
+  return {
+    props: { data },
+  };
+};
+
+const AlbumItem = ({ id, name }: any) => {
+  return (
+    <li>
+      <Link
+        href={`/album/${id}`}
+        className="underline hover:text-yellow-500 transition"
+      >
+        {name}
+      </Link>
+    </li>
+  );
+};
+
+const MillionLive = ({ data }: any) => {
+  // LIVE THE@TER
+  const LTPAlbums = data.map((item: any) =>
+    item.series == "LIVE THE@TER PERFORMANCE" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+  const LTHAlbums = data.map((item: any) =>
+    item.series == "LIVE THE@TER HARMONY" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+  const LTDAlbums = data.map((item: any) =>
+    item.series == "LIVE THE@TER DREAMERS" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+  const LTFAlbums = data.map((item: any) =>
+    item.series == "LIVE THE@TER FORWARD" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+  const LTFBrandnewAlbums = data.map((item: any) =>
+    item.series == "LIVE THE@TER FORWARD (Brand New Ver.)" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
+  // THE@TER DAYS
+  const MTGAlbums = data.map((item: any) =>
+    item.series == "MILLION THE@TER GENERATION" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+  const MTWAlbums = data.map((item: any) =>
+    item.series == "MILLION THE@TER WAVE" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+  const MTSAlbums = data.map((item: any) =>
+    item.series == "MILLION THE@TER SEASON" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+  const MTVAlbums = data.map((item: any) =>
+    item.series == "MILLION THE@TER VARIETY" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
+  // M@STER SPARKLE
+  const MSAlbums = data.map((item: any) =>
+    item.series == "M@STER SPARKLE" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+  const MS2Albums = data.map((item: any) =>
+    item.series == "M@STER SPARKLE2" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
+  // THE@TER A/B/C
+  const TAAlbums = data.map((item: any) =>
+    item.series == "THE@TER ACTIVITIES" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+  const TBAlbums = data.map((item: any) =>
+    item.series == "THE@TER BOOST" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+  const TCAlbums = data.map((item: any) =>
+    item.series == "THE@TER CHALLENGE" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
+  // MILLION RADIO
+  const MRAlbums = data.map((item: any) =>
+    item.series == "MILLION RADIO!" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
+  // OTHER
+  const OtherAlbums = data.map((item: any) =>
+    item.series == undefined ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
   return (
     <div className="container mx-auto px-4 max-w-2xl">
       <Head>
@@ -12,1025 +131,82 @@ const MillionLive = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header brand="millionlive" />
-      <h1 className="text-2xl font-bold">LIVE THE@TER</h1>
-      <h2 className="text-xl font-bold">LIVE THE@TER PERFORMANCE</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-14080"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 01
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15300"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 02
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15313"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 03
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15314"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 04
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15315"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 05
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15316"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 06
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15317"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 07
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15318"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 08
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15319"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 09
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15320"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 10
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15321"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 11
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15322"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 12
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15323"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER PERFORMANCE 13
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">LIVE THE@TER HARMONY</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/laca-15431"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER HARMONY 01
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15432"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER HARMONY 02
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15433"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER HARMONY 03
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15434"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER HARMONY 04
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15435"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER HARMONY 05
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15436"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER HARMONY 06
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15437"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER HARMONY 07
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15438"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER HARMONY 08
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15439"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER HARMONY 09
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15440"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER HARMONY 10
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">LIVE THE@TER DREAMERS</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-14411"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER DREAMERS 01 Dreaming!
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15522"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER DREAMERS 02
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15523"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER DREAMERS 03
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15524"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER DREAMERS 04
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15525"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER DREAMERS 05
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15526"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LIVE THE@TER DREAMERS 06
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">LIVE THE@TER FORWARD</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/laca-15611"
-            className="underline hover:text-yellow-500 transition"
-          >
-            01 Sunshine Rhythm
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15612"
-            className="underline hover:text-yellow-500 transition"
-          >
-            02 BlueMoon Harmony
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15613"
-            className="underline hover:text-yellow-500 transition"
-          >
-            03 Starlight Melody
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">
-        LIVE THE@TER FORWARD - Brand New Ver.
-      </h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/sun_rhythm_orchestra"
-            className="underline hover:text-yellow-500 transition"
-          >
-            サンリズム・オーケストラ (Brand New Ver.)
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/brave_harmony"
-            className="underline hover:text-yellow-500 transition"
-          >
-            brave HARMONY (Brand New Ver.)
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/starry_melody"
-            className="underline hover:text-yellow-500 transition"
-          >
-            Starry Melody (Brand New Ver.)
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/refrain_kiss"
-            className="underline hover:text-yellow-500 transition"
-          >
-            リフレインキス (Brand New Ver.)
-          </Link>
-        </li>
-      </ul>
 
-      <h1 className="text-2xl font-bold">THE@TER DAYS</h1>
-      <h2 className="text-xl font-bold">MILLION THE@TER GENERATION</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-14631"
-            className="underline hover:text-yellow-500 transition"
-          >
-            01 Brand New Theater!
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14632"
-            className="underline hover:text-yellow-500 transition"
-          >
-            02 フェアリースターズ
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14633"
-            className="underline hover:text-yellow-500 transition"
-          >
-            03 エンジェルスターズ
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14634"
-            className="underline hover:text-yellow-500 transition"
-          >
-            04 プリンセススターズ
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14635"
-            className="underline hover:text-yellow-500 transition"
-          >
-            05 夜想令嬢 -GRAC&E NOCTURNE-
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14636"
-            className="underline hover:text-yellow-500 transition"
-          >
-            06 Cleasky
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14637"
-            className="underline hover:text-yellow-500 transition"
-          >
-            07 トゥインクルリズム
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14638"
-            className="underline hover:text-yellow-500 transition"
-          >
-            08 EScape
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14639"
-            className="underline hover:text-yellow-500 transition"
-          >
-            09 4Luxury
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14640"
-            className="underline hover:text-yellow-500 transition"
-          >
-            10 閃光 HANABI団
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14641"
-            className="underline hover:text-yellow-500 transition"
-          >
-            11 UNION!!
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14642"
-            className="underline hover:text-yellow-500 transition"
-          >
-            12 D/Zeal
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14823"
-            className="underline hover:text-yellow-500 transition"
-          >
-            13 りるきゃん ～3 little candy～
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14824"
-            className="underline hover:text-yellow-500 transition"
-          >
-            14 Charlotte・Charlotte
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14825"
-            className="underline hover:text-yellow-500 transition"
-          >
-            15 Jelly PoP Beans
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14826"
-            className="underline hover:text-yellow-500 transition"
-          >
-            16 ピコピコプラネッツ
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14827"
-            className="underline hover:text-yellow-500 transition"
-          >
-            17 STAR ELEMENTS
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14828"
-            className="underline hover:text-yellow-500 transition"
-          >
-            18 765PRO ALLSTARS
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">MILLION THE@TER WAVE</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-14891"
-            className="underline hover:text-yellow-500 transition"
-          >
-            01 Flyers!!!
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14892"
-            className="underline hover:text-yellow-500 transition"
-          >
-            02 Chrono-Lexica
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14893"
-            className="underline hover:text-yellow-500 transition"
-          >
-            03 Xs
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14894"
-            className="underline hover:text-yellow-500 transition"
-          >
-            04 Sherry&apos;n Cherry
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14895"
-            className="underline hover:text-yellow-500 transition"
-          >
-            05 ARCANA
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14896"
-            className="underline hover:text-yellow-500 transition"
-          >
-            06 花咲夜
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14897"
-            className="underline hover:text-yellow-500 transition"
-          >
-            07 Jus-2-Mint
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14898"
-            className="underline hover:text-yellow-500 transition"
-          >
-            08 miraclesonic★expassion
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14899"
-            className="underline hover:text-yellow-500 transition"
-          >
-            09 Fleuranges
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14900"
-            className="underline hover:text-yellow-500 transition"
-          >
-            10 Glow Map
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14901"
-            className="underline hover:text-yellow-500 transition"
-          >
-            11 オペラセリア・煌輝座
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14902"
-            className="underline hover:text-yellow-500 transition"
-          >
-            12 ダイヤモンドダイバー◇
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14903"
-            className="underline hover:text-yellow-500 transition"
-          >
-            13 TIntMe!
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14904"
-            className="underline hover:text-yellow-500 transition"
-          >
-            14 TRICK&amp;TREAT
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14905"
-            className="underline hover:text-yellow-500 transition"
-          >
-            15 chicAAmor
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24106"
-            className="underline hover:text-yellow-500 transition"
-          >
-            16 ≡君彩≡
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24107"
-            className="underline hover:text-yellow-500 transition"
-          >
-            17 ARMooo
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24108"
-            className="underline hover:text-yellow-500 transition"
-          >
-            18 ストロベリーポップムーン
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">MILLION THE@TER SEASON</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-24151"
-            className="underline hover:text-yellow-500 transition"
-          >
-            Harmony 4 You
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15916"
-            className="underline hover:text-yellow-500 transition"
-          >
-            BRIGHT DIAMOND
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15935"
-            className="underline hover:text-yellow-500 transition"
-          >
-            CLEVER CLOVER
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15978"
-            className="underline hover:text-yellow-500 transition"
-          >
-            LOVERS HEART
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24294"
-            className="underline hover:text-yellow-500 transition"
-          >
-            夢にかけるRainbow
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-25019"
-            className="underline hover:text-yellow-500 transition"
-          >
-            SHADE OF SPADE
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/yume_ni_kakeru_rainbow"
-            className="underline hover:text-yellow-500 transition"
-          >
-            夢にかけるRainbow (Brand New Ver.)
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">MILLION THE@TER VARIETY</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-24236"
-            className="underline hover:text-yellow-500 transition"
-          >
-            MILLION THE@TER VARIETY 01
-          </Link>
-        </li>
+      <h2 className="text-xl font-light">LIVE THE@TER</h2>
+      <details>
+        <summary className="text-lg font-bold">
+          LIVE THE@TER PERFORMANCE
+        </summary>
+        <ul>{LTPAlbums}</ul>
+      </details>
+      <details>
+        <summary className="text-lg font-bold">LIVE THE@TER HARMONY</summary>
+        <ul>{LTHAlbums}</ul>
+      </details>
+      <details>
+        <summary className="text-lg font-bold">LIVE THE@TER DREAMERS</summary>
+        <ul>{LTDAlbums}</ul>
+      </details>
+      <details>
+        <summary className="text-lg font-bold">LIVE THE@TER FORWARD</summary>
+        <ul>{LTFAlbums}</ul>
+      </details>
+      <details>
+        <summary className="text-lg font-bold">
+          LIVE THE@TER FORWARD (Brand New Ver.)
+        </summary>
+        <ul>{LTFBrandnewAlbums}</ul>
+      </details>
 
-        <li>
-          <Link
-            href="/album/lacm-24329"
-            className="underline hover:text-yellow-500 transition"
-          >
-            MILLION THE@TER VARIETY 02
-          </Link>
-        </li>
-      </ul>
+      <h2 className="text-xl font-light mt-2">THE@TER DAYS</h2>
+      <details>
+        <summary className="text-lg font-bold">
+          MILLION THE@TER GENERATION
+        </summary>
+        <ul>{MTGAlbums}</ul>
+      </details>
+      <details>
+        <summary className="text-lg font-bold">MILLION THE@TER WAVE</summary>
+        <ul>{MTWAlbums}</ul>
+      </details>
+      <details>
+        <summary className="text-lg font-bold">MILLION THE@TER SEASON</summary>
+        <ul>{MTSAlbums}</ul>
+      </details>
+      <details>
+        <summary className="text-lg font-bold">MILLION THE@TER VARIETY</summary>
+        <ul>{MTVAlbums}</ul>
+      </details>
 
-      <h1 className="text-2xl font-bold">M@STER SPARKLE</h1>
-      <h2 className="text-xl font-bold">M@STER SPARKLE</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/laca-15671"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE 01
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15672"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE 02
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15673"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE 03
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15674"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE 04
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15675"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE 05
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15676"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE 06
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15677"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE 07
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15678"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE 08
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">M@STER SPARKLE2</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/laca-15901"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE2 01
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15902"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE2 02
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15903"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE2 03
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15904"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE2 04
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15905"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE2 05
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15906"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE2 06
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15907"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE2 07
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15908"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE2 08
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15909"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE2 09
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/laca-15910"
-            className="underline hover:text-yellow-500 transition"
-          >
-            M@STER SPARKLE2 10
-          </Link>
-        </li>
-      </ul>
+      <h2 className="text-xl font-light mt-2">M@STER SPARKLE</h2>
+      <details>
+        <summary className="text-lg font-bold">M@STER SPARKLE</summary>
+        <ul>{MSAlbums}</ul>
+      </details>
+      <details>
+        <summary className="text-lg font-bold">M@STER SPARKLE2</summary>
+        <ul>{MS2Albums}</ul>
+      </details>
 
-      <h1 className="text-2xl font-bold">THE@TER A/B/C</h1>
-      <h2 className="text-xl font-bold">THE@TER ACTIVITIES</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-14531"
-            className="underline hover:text-yellow-500 transition"
-          >
-            THE IDOLM@STER THE@TER ACTIVITIES 01
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14532"
-            className="underline hover:text-yellow-500 transition"
-          >
-            THE IDOLM@STER THE@TER ACTIVITIES 02
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14533"
-            className="underline hover:text-yellow-500 transition"
-          >
-            THE IDOLM@STER THE@TER ACTIVITIES 03
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">THE@TER BOOST</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-14811"
-            className="underline hover:text-yellow-500 transition"
-          >
-            THE IDOLM@STER THE@TER BOOST 01
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14812"
-            className="underline hover:text-yellow-500 transition"
-          >
-            THE IDOLM@STER THE@TER BOOST 02
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14813"
-            className="underline hover:text-yellow-500 transition"
-          >
-            THE IDOLM@STER THE@TER BOOST 03
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">THE@TER CHALLENGE</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-14947"
-            className="underline hover:text-yellow-500 transition"
-          >
-            THE IDOLM@STER THE@TER CHALLENGE 01
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14948"
-            className="underline hover:text-yellow-500 transition"
-          >
-            THE IDOLM@STER THE@TER CHALLENGE 02
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14949"
-            className="underline hover:text-yellow-500 transition"
-          >
-            THE IDOLM@STER THE@TER CHALLENGE 03
-          </Link>
-        </li>
-      </ul>
+      <h2 className="text-xl font-light mt-2">THE@TER A/B/C</h2>
+      <details>
+        <summary className="text-lg font-bold">THE@TER ACTIVITIES</summary>
+        <ul>{TAAlbums}</ul>
+      </details>
+      <details>
+        <summary className="text-lg font-bold">THE@TER BOOST</summary>
+        <ul>{TBAlbums}</ul>
+      </details>
+      <details>
+        <summary className="text-lg font-bold">THE@TER CHALLENGE</summary>
+        <ul>{TCAlbums}</ul>
+      </details>
 
-      <h1 className="text-2xl font-bold">MILLION RADIO</h1>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-14234"
-            className="underline hover:text-yellow-500 transition"
-          >
-            U・N・M・E・I ライブ
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14506"
-            className="underline hover:text-yellow-500 transition"
-          >
-            ターンオンタイム！
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-14961"
-            className="underline hover:text-yellow-500 transition"
-          >
-            ENDLESS TOUR
-          </Link>
-        </li>
-      </ul>
-      <h1 className="text-2xl font-bold">OTHER</h1>
-      <ul>
-        <li>
-          <Link
-            href="/album/moiw2014"
-            className="underline hover:text-yellow-500 transition"
-          >
-            IDOL POWER RAINBOW
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/moiw2015"
-            className="underline hover:text-yellow-500 transition"
-          >
-            アイ MUST GO!
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/gessan"
-            className="underline hover:text-yellow-500 transition"
-          >
-            君との明日を願うから
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24025"
-            className="underline hover:text-yellow-500 transition"
-          >
-            なんどでも笑おう - ミリオンライブ！盤
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24004"
-            className="underline hover:text-yellow-500 transition"
-          >
-            ZWEIGLANZ アライアンス・スターダスト
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24159"
-            className="underline hover:text-yellow-500 transition"
-          >
-            聖ミリオン女学園
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24163"
-            className="underline hover:text-yellow-500 transition"
-          >
-            VOY@GER - ミリオンライブ！盤
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/clover_days"
-            className="underline hover:text-yellow-500 transition"
-          >
-            Clover Days
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/moiw2023"
-            className="underline hover:text-yellow-500 transition"
-          >
-            CRYST@LOUD
-          </Link>
-        </li>
-      </ul>
+      <h2 className="text-xl font-light mt-2">MILLION RADIO</h2>
+      <ul>{MRAlbums}</ul>
+
+      <h2 className="text-xl font-light mt-2">OTHER</h2>
+      <ul>{OtherAlbums}</ul>
     </div>
   );
 };
