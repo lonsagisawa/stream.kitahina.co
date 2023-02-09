@@ -9,7 +9,7 @@ const BrandTitle = ({ brand }: headerProps) => {
     return (
       <Link
         href="/allstars"
-        className="text-3xl font-bold border-b-2 border-transparent transition hover:border-rose-500"
+        className="text-lg font-bold border-b-2 border-transparent transition hover:border-rose-500"
       >
         765PRO ALLSTARS
       </Link>
@@ -18,7 +18,7 @@ const BrandTitle = ({ brand }: headerProps) => {
     return (
       <Link
         href="/cinderellagirls"
-        className="text-3xl font-bold border-b-2 border-transparent transition hover:border-blue-500"
+        className="text-lg font-bold border-b-2 border-transparent transition hover:border-blue-500"
       >
         Cinderella Girls
       </Link>
@@ -27,7 +27,7 @@ const BrandTitle = ({ brand }: headerProps) => {
     return (
       <Link
         href="/millionlive"
-        className="text-3xl font-bold border-b-2 border-transparent transition hover:border-yellow-500"
+        className="text-lg font-bold border-b-2 border-transparent transition hover:border-yellow-500"
       >
         Million Live
       </Link>
@@ -36,7 +36,7 @@ const BrandTitle = ({ brand }: headerProps) => {
     return (
       <Link
         href="/sidem"
-        className="text-3xl font-bold border-b-2 border-transparent transition hover:border-emerald-500"
+        className="text-lg font-bold border-b-2 border-transparent transition hover:border-emerald-500"
       >
         SideM
       </Link>
@@ -45,7 +45,7 @@ const BrandTitle = ({ brand }: headerProps) => {
     return (
       <Link
         href="/shinycolors"
-        className="text-3xl font-bold border-b-2 border-transparent transition hover:border-sky-500"
+        className="text-lg font-bold border-b-2 border-transparent transition hover:border-sky-500"
       >
         Shiny Colors
       </Link>
@@ -61,7 +61,7 @@ const Header = ({ brand }: headerProps) => {
       <h1 className="font-black">
         <Link
           href="/"
-          className="text-4xl transition border-b-2 border-transparent hover:border-amber-300"
+          className="text-xl transition border-b-2 border-transparent hover:border-amber-300"
         >
           STREAM@S
         </Link>
