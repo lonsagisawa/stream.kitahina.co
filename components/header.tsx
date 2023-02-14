@@ -57,8 +57,8 @@ const BrandTitle = ({ brand }: headerProps) => {
 
 const Header = ({ brand }: headerProps) => {
   return (
-    <header className="py-8">
-      <h1 className="font-black">
+    <header className="mt-6 mb-4">
+      <h1 className="font-bold">
         <Link
           href="/"
           className="text-xl transition border-b-2 border-transparent hover:border-amber-300"
@@ -67,26 +67,6 @@ const Header = ({ brand }: headerProps) => {
         </Link>
       </h1>
       <BrandTitle brand={brand} />
-      <div className="flex flex-col md:flex-row mt-2 gap-2">
-        <Link
-          href="/about"
-          className="underline hover:text-amber-400 transition"
-        >
-          STREAM@Sとは？
-        </Link>
-        <Link
-          href="/info"
-          className="underline hover:text-amber-400 transition"
-        >
-          お知らせ
-        </Link>
-        <Link
-          href="https://twitter.com/kitahinaCo"
-          className="underline hover:text-amber-400 transition"
-        >
-          Twitter
-        </Link>
-      </div>
     </header>
   );
 };
