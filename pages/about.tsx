@@ -25,6 +25,9 @@ const About = () => {
             Firefoxで強化型トラッキング保護を厳格モードに設定していると、Amazon
             Musicの埋め込みが表示されません。
           </li>
+          <li className="list-disc list-inside my-2">
+            デスクトップのFirefoxでは、シェアボタンが機能しません(モバイルでは問題なく機能します)。
+          </li>
         </ul>
         <h2 className="text-2xl font-bold">誰が運営しているの？</h2>
         <p className="my-2">
