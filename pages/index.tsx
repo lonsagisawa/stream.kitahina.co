@@ -45,7 +45,7 @@ const Home = ({ data }: any) => {
       </Head>
       <div className="container mx-auto px-4 max-w-2xl">
         <Header />
-        <p className="my-4">
+        <p className="mb-4">
           サブスクリプションサービスで楽しむアイドルマスターの音楽
         </p>
         <form className="mb-4">

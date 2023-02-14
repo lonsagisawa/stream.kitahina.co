@@ -56,7 +56,9 @@ const Album = ({ album }: any) => {
       </Head>
       <Header brand={album.data.brand} />
       <div>
-        <h2 className="text-xl font-bold mb-2">{album.data.name}</h2>
+        <h2 className="text-2xl lg:text-4xl font-black lg:font-light mb-2">
+          {album.data.name}
+        </h2>
         <Share url={ogp.url} title={album.data.name} />
         <Player
           spotify={album.data.platform.spotify}
