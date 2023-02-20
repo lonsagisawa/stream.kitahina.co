@@ -1,0 +1,13 @@
+/* "px-4 py-2 rounded-xl bg-slate-500 hover:bg-slate-400 text-white shadow dark:shadow-none transition" */
+.share_button {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all ease-in 100ms;
+  background-color: #3b82f6;
+  color: var(--zinc-100);
+}
+
+.share_icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+}

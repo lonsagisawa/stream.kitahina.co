@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ShareFill } from "react-bootstrap-icons";
+import styles from "./share.module.scss";
 
 const Share = ({ url, title }: any) => {
   const data = {
@@ -17,11 +18,8 @@ const Share = ({ url, title }: any) => {
 
   return (
     <>
-      <button
-        onClick={shareEvent}
-        className="px-4 py-2 rounded-xl bg-slate-500 hover:bg-slate-400 text-white shadow dark:shadow-none transition"
-      >
-        <ShareFill className="inline-block mr-1" />
+      <button onClick={shareEvent} className={styles.share_button}>
+        <ShareFill className={styles.share_icon} />
         シェア
       </button>
     </>
