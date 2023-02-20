@@ -1,3 +1,5 @@
+import styles from "./common.module.css";
+
 interface SpotifyProp {
   id?: string;
 }
@@ -5,7 +7,7 @@ interface SpotifyProp {
 const Spotify = ({ id }: SpotifyProp) => {
   if (id == undefined) {
     return (
-      <div className="rounded border border-slate-400 dark:border-slate-600 p-4">
+      <div className={styles.not_available}>
         <p>このプラットフォームは後日対応予定です。</p>
       </div>
     );

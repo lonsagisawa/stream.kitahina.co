@@ -1,0 +1,11 @@
+.not_available {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: solid 1px var(--zinc-400);
+}
+
+@media (prefers-color-scheme: dark) {
+  .not_available {
+    border-color: var(--zinc-600);
+  }
+}

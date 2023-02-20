@@ -1,3 +1,5 @@
+import styles from "./common.module.css";
+
 interface AmazonProps {
   id?: string;
 }
@@ -5,14 +7,14 @@ interface AmazonProps {
 const Amazon = ({ id }: AmazonProps) => {
   if (id == undefined) {
     return (
-      <div className="rounded border border-slate-400 dark:border-slate-600 p-4">
+      <div className={styles.not_available}>
         <p>このプラットフォームは後日対応予定です。</p>
       </div>
     );
   } else {
     return (
       <iframe
-        id="AmazonMusicEmbedB09BJMXXNV"
+        id="AmazonMusicEmbed"
         src={`https://music.amazon.co.jp/embed/${id}`}
         width="100%"
         height="450"
