@@ -3,6 +3,31 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-slate-100 dark:bg-slate-900;
-  @apply text-slate-800 dark:text-slate-200;
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --brand-765as: #f34f6d;
+  --brand-cinderellagirls: #2681c8;
+  --brand-millionlive: #ffc30b;
+  --brand-sidem: #0fbe94;
+  --brand-shinycolors: #8dbbff;
+}
+
+body {
+  background-color: var(--zinc-100);
+  color: var(--zinc-800);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--zinc-800);
+    color: var(--zinc-200);
+  }
 }
