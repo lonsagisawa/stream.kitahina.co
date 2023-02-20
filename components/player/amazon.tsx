@@ -14,7 +14,7 @@ const Amazon = ({ id }: AmazonProps) => {
   } else {
     return (
       <iframe
-        id="AmazonMusicEmbed"
+        id="AmazonMusicEmbedB0B"
         src={`https://music.amazon.co.jp/embed/${id}`}
         width="100%"
         height="450"
