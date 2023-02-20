@@ -18,6 +18,9 @@
   --brand-millionlive: #ffc30b;
   --brand-sidem: #0fbe94;
   --brand-shinycolors: #8dbbff;
+  --platform-spotify: #1fdf64;
+  --platform-applemusic: #fb4058;
+  --platform-amazon: #ff9900;
 }
 
 body {
