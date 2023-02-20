@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ShareFill } from "react-bootstrap-icons";
-import styles from "./share.module.scss";
+import styles from "./share.module.css";
 
 const Share = ({ url, title }: any) => {
   const data = {
