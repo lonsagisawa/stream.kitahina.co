@@ -2,6 +2,7 @@ import * as React from "react";
 import Spotify from "./player/spotify";
 import AppleMusic from "./player/applemusic";
 import Amazon from "./player/amazon";
+import styles from "./player.module.scss";
 
 interface PlayerProps {
   spotify?: string;
@@ -57,11 +58,11 @@ const Player = ({ spotify, applemusic, amazon }: PlayerProps) => {
     render() {
       return (
         <>
-          <div className="flex flex-col md:flex-row gap-2 my-2">
+          <div className={styles.button_container}>
             {this.state.spotifyEnabled ? (
               /* Tab / Spotify, Enabled */
               <button
-                className="rounded-xl py-2 px-4 cursor-pointer text-center dark:border-green-500 dark:hover:border-green-400 dark:border-2 bg-green-500 text-white hover:bg-green-400 hover:text-white shadow dark:shadow-none transition"
+                className={styles.button_spotify_enabled}
                 onClick={this.enableSpotify}
               >
                 Spotify
@@ -69,7 +70,7 @@ const Player = ({ spotify, applemusic, amazon }: PlayerProps) => {
             ) : (
               /* Tab / Spotify, Disabled */
               <button
-                className="rounded-xl px-4 py-2 cursor-pointer text-center dark:border-green-500 dark:hover:border-green-400 dark:border-2 hover:bg-green-400 hover:text-white shadow dark:shadow-none transition"
+                className={styles.button_spotify_disabled}
                 onClick={this.enableSpotify}
               >
                 Spotify
@@ -78,7 +79,7 @@ const Player = ({ spotify, applemusic, amazon }: PlayerProps) => {
             {this.state.applemusicEnabled ? (
               /* Tab / Apple Music, Enabled */
               <button
-                className="rounded-xl px-4 py-2 cursor-pointer text-center dark:border-rose-500 dark:hover:border-rose-400 dark:border-2 bg-rose-500 text-white hover:bg-rose-400 hover:text-white shadow dark:shadow-none transition"
+                className={styles.button_applemusic_enabled}
                 onClick={this.enableAppleMusic}
               >
                 Apple Music
@@ -86,7 +87,7 @@ const Player = ({ spotify, applemusic, amazon }: PlayerProps) => {
             ) : (
               /* Tab / Apple Music, Disabled */
               <button
-                className="rounded-xl px-4 py-2 cursor-pointer text-center dark:border-rose-500 dark:hover:border-rose-400 dark:border-2 hover:bg-rose-400 hover:text-white shadow dark:shadow-none transition"
+                className={styles.button_applemusic_disabled}
                 onClick={this.enableAppleMusic}
               >
                 Apple Music
@@ -95,7 +96,7 @@ const Player = ({ spotify, applemusic, amazon }: PlayerProps) => {
             {this.state.amazonEnabled ? (
               /* Tab / Amazon Music, Enabled */
               <button
-                className="rounded-xl px-4 py-2 cursor-pointer text-center dark:border-orange-500 dark:hover:border-orange-400 dark:border-2 bg-orange-500 text-white hover:bg-orange-400 hover:text-white shadow dark:shadow-none transition"
+                className={styles.button_amazon_enabled}
                 onClick={this.enableAmazon}
               >
                 Amazon Music
@@ -103,16 +104,18 @@ const Player = ({ spotify, applemusic, amazon }: PlayerProps) => {
             ) : (
               /* Tab / Amazon Music, Disabled */
               <button
-                className="rounded-xl px-4 py-2 cursor-pointer text-center dark:border-orange-500 dark:hover:border-orange-400 dark:border-2 hover:bg-orange-400 hover:text-white shadow dark:shadow-none transition"
+                className={styles.button_amazon_disabled}
                 onClick={this.enableAmazon}
               >
                 Amazon Music
               </button>
             )}
           </div>
-          {this.state.spotifyEnabled && <Spotify id={spotify} />}
-          {this.state.applemusicEnabled && <AppleMusic id={applemusic} />}
-          {this.state.amazonEnabled && <Amazon id={amazon} />}
+          {this.state.spotifyEnabled ? <Spotify id={spotify} /> : undefined}
+          {this.state.applemusicEnabled ? (
+            <AppleMusic id={applemusic} />
+          ) : undefined}
+          {this.state.amazonEnabled ? <Amazon id={amazon} /> : undefined}
         </>
       );
     }
