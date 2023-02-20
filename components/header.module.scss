@@ -1,0 +1,63 @@
+.header {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Header title text */
+.header_title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all ease-in 100ms;
+  border-bottom: 2px solid transparent;
+}
+.header_title:hover {
+  border-color: var(--zinc-800);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header_title:hover {
+    border-color: var(--zinc-200);
+  }
+}
+
+.brand_common {
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: all ease-in 100ms;
+}
+
+.brand_765as {
+  @extend .brand_common;
+}
+.brand_765as:hover {
+  border-color: var(--brand-765as);
+}
+
+.brand_cinderellagirls {
+  @extend .brand_common;
+}
+.brand_cinderellagirls:hover {
+  border-color: var(--brand-cinderellagirls);
+}
+
+.brand_millionlive {
+  @extend .brand_common;
+}
+.brand_millionlive:hover {
+  border-color: var(--brand-millionlive);
+}
+
+.brand_sidem {
+  @extend .brand_common;
+}
+.brand_sidem:hover {
+  border-color: var(--brand-sidem);
+}
+
+.brand_shinycolors {
+  @extend .brand_common;
+}
+.brand_shinycolors:hover {
+  border-color: var(--brand-shinycolors);
+}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./header.module.scss";
 
 interface headerProps {
   brand?: string;
@@ -7,62 +8,44 @@ interface headerProps {
 const BrandTitle = ({ brand }: headerProps) => {
   if (brand == "allstars") {
     return (
-      <Link
-        href="/allstars"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-rose-500"
-      >
+      <Link href="/allstars" className={styles.brand_765as}>
         765PRO ALLSTARS
       </Link>
     );
   } else if (brand == "cinderellagirls") {
     return (
-      <Link
-        href="/cinderellagirls"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-blue-500"
-      >
+      <Link href="/cinderellagirls" className={styles.brand_cinderellagirls}>
         Cinderella Girls
       </Link>
     );
   } else if (brand == "millionlive") {
     return (
-      <Link
-        href="/millionlive"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-yellow-500"
-      >
+      <Link href="/millionlive" className={styles.brand_millionlive}>
         Million Live
       </Link>
     );
   } else if (brand == "sidem") {
     return (
-      <Link
-        href="/sidem"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-emerald-500"
-      >
+      <Link href="/sidem" className={styles.brand_sidem}>
         SideM
       </Link>
     );
   } else if (brand == "shinycolors") {
     return (
-      <Link
-        href="/shinycolors"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-sky-500"
-      >
+      <Link href="/shinycolors" className={styles.brand_shinycolors}>
         Shiny Colors
       </Link>
     );
   } else {
-    return <span className="text-3xl font-bold"></span>;
+    return <span className={styles.brand_common}></span>;
   }
 };
 
 const Header = ({ brand }: headerProps) => {
   return (
-    <header className="mt-6 mb-4">
-      <h1 className="font-bold">
-        <Link
-          href="/"
-          className="text-xl transition border-b-2 border-transparent hover:border-amber-300"
-        >
+    <header className={styles.header}>
+      <h1>
+        <Link href="/" className={styles.header_title}>
           STREAM@S
         </Link>
       </h1>
