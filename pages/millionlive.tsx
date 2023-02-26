@@ -1,7 +1,6 @@
 import Header from "../components/header";
 import Head from "next/head";
 import Link from "next/link";
-import Album from "./album/[id]";
 
 const API_ENDPOINT =
   process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
