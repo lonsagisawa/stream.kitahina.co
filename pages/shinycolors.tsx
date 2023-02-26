@@ -2,7 +2,54 @@ import Header from "../components/header";
 import Head from "next/head";
 import Link from "next/link";
 
-const ShinyColors = () => {
+const API_ENDPOINT =
+  process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
+
+export const getStaticProps = async () => {
+  const res = await fetch(`${API_ENDPOINT}/album/shinycolors`);
+  const resJson = await res.json();
+  const data = resJson.data;
+
+  return {
+    props: { data },
+  };
+};
+
+const AlbumItem = ({ id, name }: any) => {
+  return (
+    <li>
+      <Link
+        href={`/album/${id}`}
+        className="underline hover:text-sky-500 transition"
+      >
+        {name}
+      </Link>
+    </li>
+  );
+};
+
+const ShinyColors = ({ data }: any) => {
+  // COLORFUL FE@THERS
+  const ColorfulFeathersAlbums = data.map((item: any) =>
+    item.series == "COLORFUL FE@THERS" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
+  // Synthe-Side
+  const SyntheSideAlbums = data.map((item: any) =>
+    item.series == "Synthe-Side" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
+  // P@NORAMA WING
+  const PanoramaWingAlbums = data.map((item: any) =>
+    item.series == "P@NORAMA WING" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
   return (
     <div className="container mx-auto px-4 max-w-2xl">
       <Head>
@@ -16,110 +63,11 @@ const ShinyColors = () => {
         ストリーミングサービスで聴けるシャイニーカラーズの楽曲
       </p>
       <h2 className="text-xl font-bold">COLORFUL FE@THERS</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/laca-15863"
-            className="underline hover:text-sky-500 transition"
-          >
-            COLORFUL FE@THERS -Sol-
-          </Link>
-        </li>
-      </ul>
+      <ul>{ColorfulFeathersAlbums}</ul>
       <h2 className="text-xl font-bold">Synthe-Side</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-24244"
-            className="underline hover:text-sky-500 transition"
-          >
-            01 アンティーカ × ストレイライト
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24245"
-            className="underline hover:text-sky-500 transition"
-          >
-            02 放課後クライマックスガールズ × ノクチル
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24246"
-            className="underline hover:text-sky-500 transition"
-          >
-            03 イルミネーションスターズ × アルストロメリア × シーズ
-          </Link>
-        </li>
-      </ul>
+      <ul>{SyntheSideAlbums}</ul>
       <h2 className="text-xl font-bold">P@NORAMA WING</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lacm-24251"
-            className="underline hover:text-sky-500 transition"
-          >
-            01 シャイニーカラーズ
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24252"
-            className="underline hover:text-sky-500 transition"
-          >
-            02 イルミネーションスターズ
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24253"
-            className="underline hover:text-sky-500 transition"
-          >
-            03 アンティーカ
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24254"
-            className="underline hover:text-sky-500 transition"
-          >
-            04 放課後クライマックスガールズ
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24255"
-            className="underline hover:text-sky-500 transition"
-          >
-            05 アルストロメリア
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24256"
-            className="underline hover:text-sky-500 transition"
-          >
-            06 ストレイライト
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24257"
-            className="underline hover:text-sky-500 transition"
-          >
-            07 ノクチル
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24258"
-            className="underline hover:text-sky-500 transition"
-          >
-            08 シーズ
-          </Link>
-        </li>
-      </ul>
+      <ul>{PanoramaWingAlbums}</ul>
       <h2 className="text-xl font-bold">OTHER</h2>
       <ul>
         <li>
