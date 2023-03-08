@@ -36,6 +36,13 @@ const ShinyColors = ({ data }: any) => {
     ) : null
   );
 
+  // FR@GMENT WING
+  const FragmentWingAlbums = data.map((item: any) =>
+    item.series == "FR@GMENT WING" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
   // COLORFUL FE@THERS
   const ColorfulFeathersAlbums = data.map((item: any) =>
     item.series == "COLORFUL FE@THERS" ? (
@@ -71,6 +78,8 @@ const ShinyColors = ({ data }: any) => {
       </p>
       <h2 className="text-xl font-bold">BRILLI@NT WING</h2>
       <ul>{BrilliantWingAlbums}</ul>
+      <h2 className="text-xl font-bold">FR@GMENT WING</h2>
+      <ul>{FragmentWingAlbums}</ul>
       <h2 className="text-xl font-bold">COLORFUL FE@THERS</h2>
       <ul>{ColorfulFeathersAlbums}</ul>
       <h2 className="text-xl font-bold">Synthe-Side</h2>
