@@ -29,6 +29,13 @@ const AlbumItem = ({ id, name }: any) => {
 };
 
 const ShinyColors = ({ data }: any) => {
+  // BRILLI@NT WING
+  const BrilliantWingAlbums = data.map((item: any) =>
+    item.series == "BRILLI@NT WING" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
   // COLORFUL FE@THERS
   const ColorfulFeathersAlbums = data.map((item: any) =>
     item.series == "COLORFUL FE@THERS" ? (
@@ -62,6 +69,8 @@ const ShinyColors = ({ data }: any) => {
       <p className="my-2">
         ストリーミングサービスで聴けるシャイニーカラーズの楽曲
       </p>
+      <h2 className="text-xl font-bold">BRILLI@NT WING</h2>
+      <ul>{BrilliantWingAlbums}</ul>
       <h2 className="text-xl font-bold">COLORFUL FE@THERS</h2>
       <ul>{ColorfulFeathersAlbums}</ul>
       <h2 className="text-xl font-bold">Synthe-Side</h2>
