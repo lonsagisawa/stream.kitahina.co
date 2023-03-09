@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="container px-4 py-4 mx-auto mt-4 max-w-2xl text-sm text-slate-400 dark:text-slate-600 border-t border-slate-400 dark:border-slate-600">
-      <p>
+      <div>
         <div className="flex flex-col lg:flex-row my-2 gap-2 lg:gap-4">
           <Link
             href="/about"
@@ -31,7 +31,7 @@ const Footer = () => {
         <a href="https://kitahina.co" className="underline font-bold">
           ← kitahina.co
         </a>
-      </p>
+      </div>
     </footer>
   );
 };
