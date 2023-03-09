@@ -71,9 +71,23 @@ const ShinyColors = ({ data }: any) => {
     ) : null
   );
 
+  // OFF VOCAL COLLECTION
+  const OffVocalCollectionAlbums = data.map((item: any) =>
+    item.series == "OFF VOCAL COLLECTION" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
   // P@NORAMA WING
   const PanoramaWingAlbums = data.map((item: any) =>
     item.series == "P@NORAMA WING" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
+  // WING COLLECTION
+  const WingCollectionAlbums = data.map((item: any) =>
+    item.series == "WING COLLECTION" ? (
       <AlbumItem id={item.id} name={item.name} key={item.id} />
     ) : null
   );
@@ -102,8 +116,12 @@ const ShinyColors = ({ data }: any) => {
       <ul>{LayeredWingAlbums}</ul>
       <h2 className="text-xl font-bold">Synthe-Side</h2>
       <ul>{SyntheSideAlbums}</ul>
+      <h2 className="text-xl font-bold">OFF VOCAL COLLECTION</h2>
+      <ul>{OffVocalCollectionAlbums}</ul>
       <h2 className="text-xl font-bold">P@NORAMA WING</h2>
       <ul>{PanoramaWingAlbums}</ul>
+      <h2 className="text-xl font-bold">WING COLLECTION</h2>
+      <ul>{WingCollectionAlbums}</ul>
       <h2 className="text-xl font-bold">OTHER</h2>
       <ul>
         <li>
