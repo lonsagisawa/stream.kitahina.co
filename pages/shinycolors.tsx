@@ -101,62 +101,88 @@ const ShinyColors = ({ data }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header brand="shinycolors" />
-      <p className="my-2">
-        ストリーミングサービスで聴けるシャイニーカラーズの楽曲
-      </p>
-      <h2 className="text-xl font-bold">BRILLI@NT WING</h2>
-      <ul>{BrilliantWingAlbums}</ul>
-      <h2 className="text-xl font-bold">FR@GMENT WING</h2>
-      <ul>{FragmentWingAlbums}</ul>
-      <h2 className="text-xl font-bold">GR@DATE WING</h2>
-      <ul>{GradateWingAlbums}</ul>
-      <h2 className="text-xl font-bold">COLORFUL FE@THERS</h2>
-      <ul>{ColorfulFeathersAlbums}</ul>
-      <h2 className="text-xl font-bold">L@YERED WING</h2>
-      <ul>{LayeredWingAlbums}</ul>
-      <h2 className="text-xl font-bold">Synthe-Side</h2>
-      <ul>{SyntheSideAlbums}</ul>
-      <h2 className="text-xl font-bold">OFF VOCAL COLLECTION</h2>
-      <ul>{OffVocalCollectionAlbums}</ul>
-      <h2 className="text-xl font-bold">P@NORAMA WING</h2>
-      <ul>{PanoramaWingAlbums}</ul>
-      <h2 className="text-xl font-bold">WING COLLECTION</h2>
-      <ul>{WingCollectionAlbums}</ul>
-      <h2 className="text-xl font-bold">OTHER</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/lzc-2059"
-            className="underline hover:text-sky-500 transition"
-          >
-            神様は死んだ、って
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24027"
-            className="underline hover:text-sky-500 transition"
-          >
-            なんどでも笑おう - シャイニーカラーズ盤
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/lacm-24165"
-            className="underline hover:text-sky-500 transition"
-          >
-            VOY@GER - シャイニーカラーズ盤
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/moiw2023"
-            className="underline hover:text-sky-500 transition"
-          >
-            CRYST@LOUD
-          </Link>
-        </li>
-      </ul>
+      <details>
+        <summary className="text-xl font-bold">BRILLI@NT WING</summary>
+        <ul>{BrilliantWingAlbums}</ul>
+      </details>
+
+      <details>
+        <summary className="text-xl font-bold">FR@GMENT WING</summary>
+        <ul>{FragmentWingAlbums}</ul>
+      </details>
+
+      <details>
+        <summary className="text-xl font-bold">GR@DATE WING</summary>
+        <ul>{GradateWingAlbums}</ul>
+      </details>
+
+      <details>
+        <summary className="text-xl font-bold">COLORFUL FE@THERS</summary>
+        <ul>{ColorfulFeathersAlbums}</ul>
+      </details>
+
+      <details>
+        <summary className="text-xl font-bold">L@YERED WING</summary>
+        <ul>{LayeredWingAlbums}</ul>
+      </details>
+
+      <details>
+        <summary className="text-xl font-bold">Synthe-Side</summary>
+        <ul>{SyntheSideAlbums}</ul>
+      </details>
+
+      <details>
+        <summary className="text-xl font-bold">OFF VOCAL COLLECTION</summary>
+        <ul>{OffVocalCollectionAlbums}</ul>
+      </details>
+
+      <details>
+        <summary className="text-xl font-bold">P@NORAMA WING</summary>
+        <ul>{PanoramaWingAlbums}</ul>
+      </details>
+
+      <details>
+        <summary className="text-xl font-bold">WING COLLECTION</summary>
+        <ul>{WingCollectionAlbums}</ul>
+      </details>
+
+      <details>
+        <summary className="text-xl font-bold">OTHER</summary>
+        <ul>
+          <li>
+            <Link
+              href="/album/lzc-2059"
+              className="underline hover:text-sky-500 transition"
+            >
+              神様は死んだ、って
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/album/lacm-24027"
+              className="underline hover:text-sky-500 transition"
+            >
+              なんどでも笑おう - シャイニーカラーズ盤
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/album/lacm-24165"
+              className="underline hover:text-sky-500 transition"
+            >
+              VOY@GER - シャイニーカラーズ盤
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/album/moiw2023"
+              className="underline hover:text-sky-500 transition"
+            >
+              CRYST@LOUD
+            </Link>
+          </li>
+        </ul>
+      </details>
     </div>
   );
 };
