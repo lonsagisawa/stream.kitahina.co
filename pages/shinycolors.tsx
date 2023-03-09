@@ -57,6 +57,13 @@ const ShinyColors = ({ data }: any) => {
     ) : null
   );
 
+  // L@YERED WING
+  const LayeredWingAlbums = data.map((item: any) =>
+    item.series == "L@YERED WING" ? (
+      <AlbumItem id={item.id} name={item.name} key={item.id} />
+    ) : null
+  );
+
   // Synthe-Side
   const SyntheSideAlbums = data.map((item: any) =>
     item.series == "Synthe-Side" ? (
@@ -91,6 +98,8 @@ const ShinyColors = ({ data }: any) => {
       <ul>{GradateWingAlbums}</ul>
       <h2 className="text-xl font-bold">COLORFUL FE@THERS</h2>
       <ul>{ColorfulFeathersAlbums}</ul>
+      <h2 className="text-xl font-bold">L@YERED WING</h2>
+      <ul>{LayeredWingAlbums}</ul>
       <h2 className="text-xl font-bold">Synthe-Side</h2>
       <ul>{SyntheSideAlbums}</ul>
       <h2 className="text-xl font-bold">P@NORAMA WING</h2>
