@@ -134,6 +134,22 @@ const ShinyColors = ({ data }: any) => {
         </li>
         <li>
           <Link
+            href="/album/lacm-24027"
+            className="underline hover:text-sky-500 transition"
+          >
+            なんどでも笑おう - シャイニーカラーズ盤
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/album/lacm-24165"
+            className="underline hover:text-sky-500 transition"
+          >
+            VOY@GER - シャイニーカラーズ盤
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/album/moiw2023"
             className="underline hover:text-sky-500 transition"
           >
