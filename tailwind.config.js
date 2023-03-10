@@ -8,7 +8,17 @@ module.exports = {
     fontFamily: {
       sans: ["InterVariable", "LINE Seed JP", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          sidem: {
+            DEFAULT: "#11be93",
+            light: "#a7f3d0",
+            dark: "#065f46",
+          },
+        },
+      },
+    },
   },
   plugins: [],
 };
