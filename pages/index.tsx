@@ -95,17 +95,16 @@ const Home = ({ data }: any) => {
               <h2 className="font-bold text-xl">ミリオンライブ</h2>
             </div>
           </Link>
+          <Link href="/sidem">
+            <div className="rounded-lg bg-brand-sidem text-white p-4 transition shadow hover:brightness-110 hover:shadow-brand-sidem-light hover:dark:shadow-brand-sidem-dark">
+              <h2 className="font-bold text-xl">SideM</h2>
+            </div>
+          </Link>
           <Link href="/shinycolors">
             <div className="rounded-lg bg-sky-500 text-white p-4 transition shadow hover:bg-sky-400 hover:shadow-sky-200 hover:dark:shadow-sky-800">
               <h2 className="font-bold text-xl">シャイニーカラーズ</h2>
             </div>
           </Link>
-        </div>
-        <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
-          <div className="rounded-lg bg-emerald-500 text-white p-4 transition shadow hover:bg-emerald-400 hover:shadow-emerald-200 hover:dark:shadow-emerald-800">
-            <h2 className="font-bold text-xl">SideM</h2>
-            <p className="text-sm">2023年対応予定</p>
-          </div>
         </div>
       </div>
     </>
