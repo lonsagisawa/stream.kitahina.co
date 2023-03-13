@@ -36,7 +36,7 @@ const BrandTitle = ({ brand }: headerProps) => {
     return (
       <Link
         href="/sidem"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-emerald-500"
+        className="text-lg font-bold border-b-2 border-transparent transition hover:border-brand-sidem"
       >
         SideM
       </Link>
