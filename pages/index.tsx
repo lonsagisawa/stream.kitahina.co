@@ -81,17 +81,17 @@ const Home = ({ data }: any) => {
         )}
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 mb-4 pb-4 border-b border-slate-400 dark:border-slate-600">
           <Link href="/allstars">
-            <div className="rounded-lg bg-rose-500 text-white p-4 transition shadow hover:bg-rose-400 hover:shadow-rose-200 hover:dark:shadow-rose-800">
+            <div className="rounded-lg bg-brand-allstars text-white p-4 transition shadow hover:brightness-110 hover:shadow-brand-allstars-light hover:dark:shadow-brand-allstars-dark">
               <h2 className="font-bold text-xl">765PRO ALLSTARS</h2>
             </div>
           </Link>
           <Link href="/cinderellagirls">
-            <div className="rounded-lg bg-blue-500 text-white p-4 transition-all shadow hover:bg-blue-400 hover:shadow-blue-200 hover:dark:shadow-blue-800">
+            <div className="rounded-lg bg-brand-cinderellagirls text-white p-4 transition shadow hover:brightness-110 hover:shadow-brand-cinderellagirls-light hover:dark:shadow-brand-cinderellagirls-dark">
               <h2 className="font-bold text-xl">シンデレラガールズ</h2>
             </div>
           </Link>
           <Link href="/millionlive">
-            <div className="rounded-lg bg-yellow-500 text-white p-4 transition shadow hover:bg-yellow-400 hover:shadow-yellow-200 hover:dark:shadow-yellow-800">
+            <div className="rounded-lg bg-brand-millionlive text-white p-4 transition shadow hover:brightness-110 hover:shadow-brand-millionlive-light hover:dark:shadow-brand-millionlive-dark">
               <h2 className="font-bold text-xl">ミリオンライブ</h2>
             </div>
           </Link>
@@ -101,7 +101,7 @@ const Home = ({ data }: any) => {
             </div>
           </Link>
           <Link href="/shinycolors">
-            <div className="rounded-lg bg-sky-500 text-white p-4 transition shadow hover:bg-sky-400 hover:shadow-sky-200 hover:dark:shadow-sky-800">
+            <div className="rounded-lg bg-brand-shinycolors text-white p-4 transition shadow hover:brightness-110 hover:shadow-brand-shinycolors-light hover:dark:shadow-brand-shinycolors-dark">
               <h2 className="font-bold text-xl">シャイニーカラーズ</h2>
             </div>
           </Link>
