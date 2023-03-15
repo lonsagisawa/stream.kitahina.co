@@ -26,7 +26,7 @@ const Header = ({ brand }: headerProps) => {
       {brand ? (
         <Link
           href={`/${brand}`}
-          className="text-lg font-bold border-b-2 border-transparent transition-color hover:border-brand"
+          className="text-lg font-bold border-b-2 border-transparent transition hover:border-brand"
         >
           {brands[brand]}
         </Link>
