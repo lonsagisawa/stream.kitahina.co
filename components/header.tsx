@@ -4,55 +4,12 @@ interface headerProps {
   brand?: string;
 }
 
-const BrandTitle = ({ brand }: headerProps) => {
-  if (brand == "allstars") {
-    return (
-      <Link
-        href="/allstars"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-rose-500"
-      >
-        765PRO ALLSTARS
-      </Link>
-    );
-  } else if (brand == "cinderellagirls") {
-    return (
-      <Link
-        href="/cinderellagirls"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-blue-500"
-      >
-        Cinderella Girls
-      </Link>
-    );
-  } else if (brand == "millionlive") {
-    return (
-      <Link
-        href="/millionlive"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-yellow-500"
-      >
-        Million Live
-      </Link>
-    );
-  } else if (brand == "sidem") {
-    return (
-      <Link
-        href="/sidem"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-brand-sidem"
-      >
-        SideM
-      </Link>
-    );
-  } else if (brand == "shinycolors") {
-    return (
-      <Link
-        href="/shinycolors"
-        className="text-lg font-bold border-b-2 border-transparent transition hover:border-sky-500"
-      >
-        Shiny Colors
-      </Link>
-    );
-  } else {
-    return <span className="text-3xl font-bold"></span>;
-  }
+const brands = {
+  allstars: "765PRO ALLSTARS",
+  cinderellagirls: "Cinderella Girls",
+  millionlive: "Million Live",
+  sidem: "SideM",
+  shinycolors: "Shiny Colors",
 };
 
 const Header = ({ brand }: headerProps) => {
@@ -66,7 +23,16 @@ const Header = ({ brand }: headerProps) => {
           STREAM@S
         </Link>
       </h1>
-      <BrandTitle brand={brand} />
+      {brand ? (
+        <Link
+          href={`/${brand}`}
+          className="text-lg font-bold border-b-2 border-transparent transition-color hover:border-brand"
+        >
+          {brands[brand]}
+        </Link>
+      ) : (
+        <span className="text-3xl font-bold"></span>
+      )}
     </header>
   );
 };
