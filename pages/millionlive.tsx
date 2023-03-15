@@ -1,126 +1,72 @@
 import Header from "../components/header";
 import Head from "next/head";
 import Link from "next/link";
+import List from "../components/list";
 import tailwindcssConfig from "../tailwind.config";
+import { Album, Albums } from "../types/Album";
 
 const API_ENDPOINT =
   process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${API_ENDPOINT}/album/millionlive`);
-  const resJson = await res.json();
-  const data = resJson.data;
+  const albums: Albums = {};
+  await fetch(`${API_ENDPOINT}/album/millionlive`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      return json.data;
+    })
+    .then((data) => {
+      if (data) {
+        let series = "";
+        data.forEach((album: Album) => {
+          if (album.series && series !== album.series) {
+            series = album.series;
+          } else if (!album.series) {
+            series = "OTHER";
+          }
+
+          if (!albums[series]) {
+            albums[series] = [];
+          }
+
+          albums[series].push(album);
+        });
+      }
+    });
 
   return {
-    props: { data },
+    props: { albums },
   };
 };
 
-const AlbumItem = ({ id, name }: any) => {
-  return (
-    <li>
-      <Link
-        href={`/album/${id}`}
-        className="underline hover:text-yellow-500 transition"
-      >
-        {name}
-      </Link>
-    </li>
-  );
-};
+const MillionLive = ({ albums }: { albums: Albums }) => {
+  const data: {
+    [key: string]: Albums;
+  } = {};
+  Object.keys(albums).map((series) => {
+    let kind = "";
+    if (series.match(/^LIVE THE@TER/)) {
+      kind = "LIVE THE@TER";
+    } else if (series.match(/^MILLION THE@TER/)) {
+      kind = "THE@TER DAYS";
+    } else if (series.match(/^M@STER SPARKLE/)) {
+      kind = "M@STER SPARKLE";
+    } else if (series.match(/^THE@TER [ABC]/)) {
+      kind = "THE@TER A/B/C";
+    } else if (series.match(/^MILLION RADIO/)) {
+      kind = "MILLION RADIO";
+    } else {
+      kind = "OTHER";
+    }
 
-const MillionLive = ({ data }: any) => {
-  // LIVE THE@TER
-  const LTPAlbums = data.map((item: any) =>
-    item.series == "LIVE THE@TER PERFORMANCE" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-  const LTHAlbums = data.map((item: any) =>
-    item.series == "LIVE THE@TER HARMONY" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-  const LTDAlbums = data.map((item: any) =>
-    item.series == "LIVE THE@TER DREAMERS" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-  const LTFAlbums = data.map((item: any) =>
-    item.series == "LIVE THE@TER FORWARD" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-  const LTFBrandnewAlbums = data.map((item: any) =>
-    item.series == "LIVE THE@TER FORWARD (Brand New Ver.)" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
+    if (!data[kind]) {
+      data[kind] = {};
+    }
 
-  // THE@TER DAYS
-  const MTGAlbums = data.map((item: any) =>
-    item.series == "MILLION THE@TER GENERATION" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-  const MTWAlbums = data.map((item: any) =>
-    item.series == "MILLION THE@TER WAVE" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-  const MTSAlbums = data.map((item: any) =>
-    item.series == "MILLION THE@TER SEASON" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-  const MTVAlbums = data.map((item: any) =>
-    item.series == "MILLION THE@TER VARIETY" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // M@STER SPARKLE
-  const MSAlbums = data.map((item: any) =>
-    item.series == "M@STER SPARKLE" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-  const MS2Albums = data.map((item: any) =>
-    item.series == "M@STER SPARKLE2" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // THE@TER A/B/C
-  const TAAlbums = data.map((item: any) =>
-    item.series == "THE@TER ACTIVITIES" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-  const TBAlbums = data.map((item: any) =>
-    item.series == "THE@TER BOOST" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-  const TCAlbums = data.map((item: any) =>
-    item.series == "THE@TER CHALLENGE" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // MILLION RADIO
-  const MRAlbums = data.map((item: any) =>
-    item.series == "MILLION RADIO!" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // OTHER
-  const OtherAlbums = data.map((item: any) =>
-    item.series == undefined ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
+    data[kind][series] = albums[series];
+  });
 
   return (
     <div
@@ -138,81 +84,17 @@ const MillionLive = ({ data }: any) => {
       </Head>
       <Header brand="millionlive" />
 
-      <h2 className="text-xl font-light">LIVE THE@TER</h2>
-      <details>
-        <summary className="text-lg font-bold">
-          LIVE THE@TER PERFORMANCE
-        </summary>
-        <ul>{LTPAlbums}</ul>
-      </details>
-      <details>
-        <summary className="text-lg font-bold">LIVE THE@TER HARMONY</summary>
-        <ul>{LTHAlbums}</ul>
-      </details>
-      <details>
-        <summary className="text-lg font-bold">LIVE THE@TER DREAMERS</summary>
-        <ul>{LTDAlbums}</ul>
-      </details>
-      <details>
-        <summary className="text-lg font-bold">LIVE THE@TER FORWARD</summary>
-        <ul>{LTFAlbums}</ul>
-      </details>
-      <details>
-        <summary className="text-lg font-bold">
-          LIVE THE@TER FORWARD (Brand New Ver.)
-        </summary>
-        <ul>{LTFBrandnewAlbums}</ul>
-      </details>
-
-      <h2 className="text-xl font-light mt-2">THE@TER DAYS</h2>
-      <details>
-        <summary className="text-lg font-bold">
-          MILLION THE@TER GENERATION
-        </summary>
-        <ul>{MTGAlbums}</ul>
-      </details>
-      <details>
-        <summary className="text-lg font-bold">MILLION THE@TER WAVE</summary>
-        <ul>{MTWAlbums}</ul>
-      </details>
-      <details>
-        <summary className="text-lg font-bold">MILLION THE@TER SEASON</summary>
-        <ul>{MTSAlbums}</ul>
-      </details>
-      <details>
-        <summary className="text-lg font-bold">MILLION THE@TER VARIETY</summary>
-        <ul>{MTVAlbums}</ul>
-      </details>
-
-      <h2 className="text-xl font-light mt-2">M@STER SPARKLE</h2>
-      <details>
-        <summary className="text-lg font-bold">M@STER SPARKLE</summary>
-        <ul>{MSAlbums}</ul>
-      </details>
-      <details>
-        <summary className="text-lg font-bold">M@STER SPARKLE2</summary>
-        <ul>{MS2Albums}</ul>
-      </details>
-
-      <h2 className="text-xl font-light mt-2">THE@TER A/B/C</h2>
-      <details>
-        <summary className="text-lg font-bold">THE@TER ACTIVITIES</summary>
-        <ul>{TAAlbums}</ul>
-      </details>
-      <details>
-        <summary className="text-lg font-bold">THE@TER BOOST</summary>
-        <ul>{TBAlbums}</ul>
-      </details>
-      <details>
-        <summary className="text-lg font-bold">THE@TER CHALLENGE</summary>
-        <ul>{TCAlbums}</ul>
-      </details>
-
-      <h2 className="text-xl font-light mt-2">MILLION RADIO</h2>
-      <ul>{MRAlbums}</ul>
-
-      <h2 className="text-xl font-light mt-2">OTHER</h2>
-      <ul>{OtherAlbums}</ul>
+      {Object.keys(data).map((kind, i) => (
+        <section key={i} className="mt-10">
+          <h2
+            className={`text-xl font-light ${kind === "OTHER" && "sr-only"}`}
+            aria-hidden={kind !== "OTHER"}
+          >
+            {kind}
+          </h2>
+          <List albums={data[kind]} />
+        </section>
+      ))}
     </div>
   );
 };

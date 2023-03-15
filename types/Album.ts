@@ -51,3 +51,7 @@ export type Album = {
   };
   songs?: Array<string>;
 };
+
+export type Albums = {
+  [key: string]: Album[];
+};
