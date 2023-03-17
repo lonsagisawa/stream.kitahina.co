@@ -1,12 +1,9 @@
 import Header from "../components/header";
 import Head from "next/head";
 import Link from "next/link";
-import { Album } from "../types/Album";
+import List from "../components/list";
 import tailwindcssConfig from "../tailwind.config";
-
-interface Albums {
-  [key: string]: Album[];
-}
+import { Album, Albums } from "../types/Album";
 
 const API_ENDPOINT =
   process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
@@ -62,8 +59,6 @@ export const getStaticProps = async () => {
 };
 
 const SideM = ({ albums }: { albums: Albums }) => {
-  const keys = Object.keys(albums);
-
   return (
     <div
       className="container mx-auto px-4 max-w-2xl"
@@ -79,28 +74,7 @@ const SideM = ({ albums }: { albums: Albums }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header brand="sidem" />
-      <p className="my-2">ストリーミングサービスで聴けるSideMの楽曲</p>
-      {keys.length > 0 ? (
-        keys.map((series, i) => (
-          <section key={i} className="mt-8">
-            <h2 className="text-xl font-bold">{series}</h2>
-            <ul className="mt-2">
-              {albums[series].map(({ id, name }, j) => (
-                <li key={j}>
-                  <Link
-                    href={`/album/${id}`}
-                    className="block py-1 underline hover:text-brand-sidem transition-colors"
-                  >
-                    {name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))
-      ) : (
-        <p className="py-8 grid place-content-center">取得できませんでした</p>
-      )}
+      <List albums={albums} />
     </div>
   );
 };

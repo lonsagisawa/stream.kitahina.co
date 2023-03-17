@@ -1,9 +1,57 @@
 import Header from "../components/header";
 import Head from "next/head";
 import Link from "next/link";
+import List from "../components/list";
 import tailwindcssConfig from "../tailwind.config";
+import { Album, Albums } from "../types/Album";
 
-const ShinyColors = () => {
+const API_ENDPOINT =
+  process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
+
+export const getStaticProps = async () => {
+  const albums: Albums = {};
+  await fetch(`${API_ENDPOINT}/album/allstars`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      return json.data;
+    })
+    .then((data) => {
+      if (data) {
+        let series = "";
+        data.forEach((album: Album) => {
+          if (album.series && series !== album.series) {
+            series = album.series;
+          }
+
+          if (!albums[series]) {
+            albums[series] = [];
+          }
+
+          albums[series].push(album);
+        });
+      }
+    });
+  await fetch(`${API_ENDPOINT}/album/fivestars`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      return json.data;
+    })
+    .then((data) => {
+      if (data) {
+        albums["M@STERS OF IDOL WORLD!!"] = data;
+      }
+    });
+
+  return {
+    props: { albums },
+  };
+};
+
+const AllStars = ({ albums }: { albums: Albums }) => {
   return (
     <div
       className="container mx-auto px-4 max-w-2xl"
@@ -26,70 +74,9 @@ const ShinyColors = () => {
         </Link>
         )、掲載は後日を予定しております。
       </p>
-      <h2 className="text-xl font-bold">765PRO ALLSTARS+ GRE@TEST BEST!</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/cocx-38070"
-            className="underline hover:text-rose-500 transition"
-          >
-            -THE IDOLM@STER HISTORY-
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/cocx-38071"
-            className="underline hover:text-rose-500 transition"
-          >
-            -SWEET&SMILE!-
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/cocx-38073"
-            className="underline hover:text-rose-500 transition"
-          >
-            -COOL&BITTER!-
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/cocx-38075"
-            className="underline hover:text-rose-500 transition"
-          >
-            -LOVE&PEACE!-
-          </Link>
-        </li>
-      </ul>
-      <h2 className="text-xl font-bold">M@STERS OF IDOL WORLD!!</h2>
-      <ul>
-        <li>
-          <Link
-            href="/album/moiw2014"
-            className="underline hover:text-rose-500 transition"
-          >
-            IDOL POWER RAINBOW
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/moiw2015"
-            className="underline hover:text-rose-500 transition"
-          >
-            アイ MUST GO!
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/album/moiw2023"
-            className="underline hover:text-rose-500 transition"
-          >
-            CRYST@LOUD
-          </Link>
-        </li>
-      </ul>
+      <List albums={albums} />
     </div>
   );
 };
 
-export default ShinyColors;
+export default AllStars;

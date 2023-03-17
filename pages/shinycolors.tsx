@@ -1,98 +1,64 @@
 import Header from "../components/header";
 import Head from "next/head";
 import Link from "next/link";
+import List from "../components/list";
 import tailwindcssConfig from "../tailwind.config";
+import { Album, Albums } from "../types/Album";
 
 const API_ENDPOINT =
   process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${API_ENDPOINT}/album/shinycolors`);
-  const resJson = await res.json();
-  const data = resJson.data;
+  const albums: Albums = {};
+  await fetch(`${API_ENDPOINT}/album/shinycolors`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      return json.data;
+    })
+    .then((data) => {
+      if (data) {
+        let series = "";
+        data.forEach((album: Album) => {
+          if (album.series && series !== album.series) {
+            series = album.series;
+          } else if (!album.series) {
+            series = "OTHER";
+          }
+
+          const name = album["name"].match(/^(.+?\s)([01]\d)(.*)/);
+          if (name && name[3].length > 0) {
+            album["name"] = name[2] + name[3];
+          }
+
+          if (!albums[series]) {
+            albums[series] = [];
+          }
+
+          albums[series].push(album);
+        });
+      }
+    });
+  await fetch(`${API_ENDPOINT}/album/moiw2023`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      return json.data;
+    })
+    .then((data) => {
+      if (albums["OTHER"] && data) {
+        albums["OTHER"].push(data);
+      }
+    });
 
   return {
-    props: { data },
+    props: { albums },
   };
 };
 
-const AlbumItem = ({ id, name }: any) => {
-  return (
-    <li>
-      <Link
-        href={`/album/${id}`}
-        className="underline hover:text-sky-500 transition"
-      >
-        {name}
-      </Link>
-    </li>
-  );
-};
-
-const ShinyColors = ({ data }: any) => {
-  // BRILLI@NT WING
-  const BrilliantWingAlbums = data.map((item: any) =>
-    item.series == "BRILLI@NT WING" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // FR@GMENT WING
-  const FragmentWingAlbums = data.map((item: any) =>
-    item.series == "FR@GMENT WING" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // GR@DATE WING
-  const GradateWingAlbums = data.map((item: any) =>
-    item.series == "GR@DATE WING" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // COLORFUL FE@THERS
-  const ColorfulFeathersAlbums = data.map((item: any) =>
-    item.series == "COLORFUL FE@THERS" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // L@YERED WING
-  const LayeredWingAlbums = data.map((item: any) =>
-    item.series == "L@YERED WING" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // Synthe-Side
-  const SyntheSideAlbums = data.map((item: any) =>
-    item.series == "Synthe-Side" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // OFF VOCAL COLLECTION
-  const OffVocalCollectionAlbums = data.map((item: any) =>
-    item.series == "OFF VOCAL COLLECTION" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // P@NORAMA WING
-  const PanoramaWingAlbums = data.map((item: any) =>
-    item.series == "P@NORAMA WING" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
-  // WING COLLECTION
-  const WingCollectionAlbums = data.map((item: any) =>
-    item.series == "WING COLLECTION" ? (
-      <AlbumItem id={item.id} name={item.name} key={item.id} />
-    ) : null
-  );
-
+const ShinyColors = ({ albums }: { albums: Albums }) => {
   return (
     <div
       className="container mx-auto px-4 max-w-2xl"
@@ -108,88 +74,7 @@ const ShinyColors = ({ data }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header brand="shinycolors" />
-      <details>
-        <summary className="text-xl font-bold">BRILLI@NT WING</summary>
-        <ul>{BrilliantWingAlbums}</ul>
-      </details>
-
-      <details>
-        <summary className="text-xl font-bold">FR@GMENT WING</summary>
-        <ul>{FragmentWingAlbums}</ul>
-      </details>
-
-      <details>
-        <summary className="text-xl font-bold">GR@DATE WING</summary>
-        <ul>{GradateWingAlbums}</ul>
-      </details>
-
-      <details>
-        <summary className="text-xl font-bold">COLORFUL FE@THERS</summary>
-        <ul>{ColorfulFeathersAlbums}</ul>
-      </details>
-
-      <details>
-        <summary className="text-xl font-bold">L@YERED WING</summary>
-        <ul>{LayeredWingAlbums}</ul>
-      </details>
-
-      <details>
-        <summary className="text-xl font-bold">Synthe-Side</summary>
-        <ul>{SyntheSideAlbums}</ul>
-      </details>
-
-      <details>
-        <summary className="text-xl font-bold">OFF VOCAL COLLECTION</summary>
-        <ul>{OffVocalCollectionAlbums}</ul>
-      </details>
-
-      <details>
-        <summary className="text-xl font-bold">P@NORAMA WING</summary>
-        <ul>{PanoramaWingAlbums}</ul>
-      </details>
-
-      <details>
-        <summary className="text-xl font-bold">WING COLLECTION</summary>
-        <ul>{WingCollectionAlbums}</ul>
-      </details>
-
-      <details>
-        <summary className="text-xl font-bold">OTHER</summary>
-        <ul>
-          <li>
-            <Link
-              href="/album/lzc-2059"
-              className="underline hover:text-sky-500 transition"
-            >
-              神様は死んだ、って
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/album/lacm-24027"
-              className="underline hover:text-sky-500 transition"
-            >
-              なんどでも笑おう - シャイニーカラーズ盤
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/album/lacm-24165"
-              className="underline hover:text-sky-500 transition"
-            >
-              VOY@GER - シャイニーカラーズ盤
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/album/moiw2023"
-              className="underline hover:text-sky-500 transition"
-            >
-              CRYST@LOUD
-            </Link>
-          </li>
-        </ul>
-      </details>
+      <List albums={albums} />
     </div>
   );
 };
