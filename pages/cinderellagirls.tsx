@@ -160,6 +160,14 @@ const CinderellaGirls = () => {
       </Head>
       <Header brand="cinderellagirls" />
       <p className="my-2">
+        <Link
+          href="/cinderellagirls/u149"
+          className="underline font-bold hover:text-brand transition-colors"
+        >
+          アニメ「U149」の楽曲はこちら →
+        </Link>
+      </p>
+      <p className="my-2">
         シンデレラガールズはアルバム単位での開放はなされていないため、日本コロムビアが供給する公式全曲プレイリストを掲載いたします。
       </p>
       <Player />
