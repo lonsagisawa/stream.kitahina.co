@@ -57,6 +57,8 @@ const MillionLive = ({ albums }: { albums: Albums }) => {
       kind = "THE@TER A/B/C";
     } else if (series.match(/^MILLION RADIO/)) {
       kind = "MILLION RADIO";
+    } else if (series.match(/^THE IDOLM@STER MILLION LIVE! ベストアルバム/)) {
+      kind = "THE IDOLM@STER MILLION LIVE! ベストアルバム";
     } else {
       kind = "OTHER";
     }
