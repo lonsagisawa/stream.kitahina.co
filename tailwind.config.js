@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["InterVariable", "LINE Seed JP", "sans-serif"],
+      sans: ["Inter Variable", "LINE Seed JP", "sans-serif"],
     },
     extend: {
       colors: {

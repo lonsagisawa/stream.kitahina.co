@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import "@fontsource/inter/variable.css";
+import "@fontsource-variable/inter";
 import "../styles/lineseed/100.css";
 import "../styles/lineseed/300.css";
 import "../styles/lineseed/700.css";
