@@ -1,5 +1,4 @@
 import Header from "../../components/header";
-import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,13 +27,9 @@ const About = () => {
       </ul>
       <h2 className="text-2xl font-bold">誰が運営しているの？</h2>
       <p className="my-2">
-        <Link
-          href="https://lon.sagisawa.me"
-          target="_blank"
-          className="underline"
-        >
+        <a href="https://lon.sagisawa.me" target="_blank" className="underline">
           鷺沢ろん
-        </Link>
+        </a>
         が設置、運営しております。
       </p>
       <h2 className="text-2xl font-bold">ソースコードはある？貢献できる？</h2>
