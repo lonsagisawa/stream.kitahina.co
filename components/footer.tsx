@@ -17,12 +17,6 @@ const Footer = () => {
           >
             プライバシーポリシー
           </Link>
-          <Link
-            href="https://twitter.com/kitahinaCo"
-            className="underline hover:text-amber-400 transition"
-          >
-            Twitter
-          </Link>
         </div>
         こちらは有志により作成されたファンサイトです
         <br />
