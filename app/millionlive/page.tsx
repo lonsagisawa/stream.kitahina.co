@@ -7,7 +7,7 @@ import { Metadata } from "next";
 const API_ENDPOINT =
   process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
 
-export const getData = async () => {
+const getData = async () => {
   const albums: Albums = {};
   await fetch(`${API_ENDPOINT}/album/millionlive`)
     .then((response) => {

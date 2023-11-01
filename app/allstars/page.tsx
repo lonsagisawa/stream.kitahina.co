@@ -8,7 +8,7 @@ import { Album, Albums } from "../../types/Album";
 const API_ENDPOINT =
   process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
 
-export const getData = async () => {
+const getData = async () => {
   const albums: Albums = {};
   await fetch(`${API_ENDPOINT}/album/allstars`)
     .then((response) => {

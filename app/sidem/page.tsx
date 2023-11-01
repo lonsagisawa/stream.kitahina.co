@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "STREAM@S - SideM",
 };
 
-export const getData = async () => {
+const getData = async () => {
   const albums: Albums = {};
   await fetch(`${API_ENDPOINT}/album/sidem`)
     .then((response) => {
