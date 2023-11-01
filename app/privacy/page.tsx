@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "個人情報の取り扱いについて - STREAM@S",
 };
 
-const Privacy = () => {
+const Privacy = async () => {
   return (
     <div className="container mx-auto px-4 max-w-2xl">
       <Header />

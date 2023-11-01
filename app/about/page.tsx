@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "STREAM@S",
 };
 
-const About = () => {
+const About = async () => {
   return (
     <div className="container mx-auto px-4 max-w-2xl">
       <Header />
