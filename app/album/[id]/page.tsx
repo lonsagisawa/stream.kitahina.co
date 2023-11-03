@@ -17,10 +17,16 @@ export const generateStaticParams = async () => {
   }));
 };
 
-export const generateMetadata = async ({ params }) => {
-  const res = await fetch(`${API_ENDPOINT}/album/${params.id}`);
+const fetchAlbum = async (id: string) => {
+  const res = await fetch(`${API_ENDPOINT}/album/${id}`);
   const data = await res.json();
   const album: Album = data.data;
+
+  return album;
+};
+
+export const generateMetadata = async ({ params }) => {
+  const album = await fetchAlbum(params.id);
 
   const ogp = {
     url: "https://stream.kitahina.co/album/" + album.id,
@@ -56,9 +62,7 @@ export const generateMetadata = async ({ params }) => {
 };
 
 const AlbumPage = async ({ params }) => {
-  const res = await fetch(`${API_ENDPOINT}/album/${params.id}`);
-  const data = await res.json();
-  const album: Album = data.data;
+  const album = await fetchAlbum(params.id);
   const url = "https://stream.kitahina.co/album/" + album.id;
 
   return (
