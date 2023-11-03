@@ -47,7 +47,7 @@ export const generateMetadata = async ({ params }: pageParams) => {
       title: album.name,
       images: [
         {
-          url: ogp.url,
+          url: ogp.img,
           width: 1200,
           height: 630,
         },
