@@ -17,6 +17,12 @@ export const generateStaticParams = async () => {
   }));
 };
 
+type pageParams = {
+  params: {
+    id: string;
+  };
+};
+
 const fetchAlbum = async (id: string) => {
   const res = await fetch(`${API_ENDPOINT}/album/${id}`);
   const data = await res.json();
@@ -25,7 +31,7 @@ const fetchAlbum = async (id: string) => {
   return album;
 };
 
-export const generateMetadata = async ({ params }) => {
+export const generateMetadata = async ({ params }: pageParams) => {
   const album = await fetchAlbum(params.id);
 
   const ogp = {
@@ -34,6 +40,7 @@ export const generateMetadata = async ({ params }) => {
   };
 
   return {
+    metadataBase: new URL("https://stream.kitahina.co"),
     title: album.name + "- STREAM@S",
     description: "ストリーミングサービスで楽しむアイドルマスターシリーズの音楽",
     openGraph: {
@@ -61,7 +68,7 @@ export const generateMetadata = async ({ params }) => {
   };
 };
 
-const AlbumPage = async ({ params }) => {
+const AlbumPage = async ({ params }: pageParams) => {
   const album = await fetchAlbum(params.id);
   const url = "https://stream.kitahina.co/album/" + album.id;
 
