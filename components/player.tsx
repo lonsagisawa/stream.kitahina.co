@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Spotify from "./player/spotify";
 import AppleMusic from "./player/applemusic";
