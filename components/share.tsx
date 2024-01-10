@@ -18,7 +18,7 @@ const Share = ({ url, title }: any) => {
   };
 
   return (
-    <>
+    <div className="flex flex-row gap-2">
       <button
         onClick={shareEvent}
         className="px-4 py-2 rounded-xl bg-slate-500 hover:bg-slate-400 text-white shadow dark:shadow-none transition"
@@ -26,7 +26,14 @@ const Share = ({ url, title }: any) => {
         <ShareFill className="inline-block mr-1" />
         シェア
       </button>
-    </>
+      <a
+        href={`https://misskeyshare.link/share.html?text=${data.text}&url=${data.url}`}
+        className="px-4 py-2 rounded-xl bg-lime-500 hover:bg-lime-400 text-white shadow darl:shadow-none transition"
+      >
+        <ShareFill className="inline-block mr-1" />
+        Misskeyでシェア
+      </a>
+    </div>
   );
 };
 
