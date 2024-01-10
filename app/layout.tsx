@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "音楽ストリーミングでひろがるアイドルマスターの世界",
 };
 
+// TODO: Proper cache strategy
+export const dynamic = "force-dynamic";
+
 export default function RootLayout({
   children,
 }: {
