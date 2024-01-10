@@ -9,7 +9,8 @@ const API_ENDPOINT =
 export const dynamicParams = false;
 
 export const generateStaticParams = async () => {
-  const res = await fetch(`${API_ENDPOINT}/album`);
+  // TODO: Proper cache strategy
+  const res = await fetch(`${API_ENDPOINT}/album`, { cache: "no-store" });
   const albums = await res.json();
 
   return albums.data.map((data: { id: string }) => ({
