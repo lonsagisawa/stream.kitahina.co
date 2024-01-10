@@ -7,9 +7,15 @@ import { Metadata } from "next";
 const API_ENDPOINT =
   process.env.API_ENDPOINT || "https://stream-api.kitahina.co";
 
+const cacheStrategy = (): RequestInit => {
+  return process.env.NODE_ENV === "production"
+    ? { next: { revalidate: 3600 } }
+    : { cache: "no-store" };
+};
+
 const getData = async () => {
   const albums: Albums = {};
-  await fetch(`${API_ENDPOINT}/album/millionlive`)
+  await fetch(`${API_ENDPOINT}/album/millionlive`, cacheStrategy())
     .then((response) => {
       return response.json();
     })

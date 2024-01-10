@@ -12,9 +12,15 @@ export const metadata: Metadata = {
   title: "STREAM@S - Shiny Colors",
 };
 
+const cacheStrategy = (): RequestInit => {
+  return process.env.NODE_ENV === "production"
+    ? { next: { revalidate: 3600 } }
+    : { cache: "no-store" };
+};
+
 const getData = async () => {
   const albums: Albums = {};
-  await fetch(`${API_ENDPOINT}/album/shinycolors`)
+  await fetch(`${API_ENDPOINT}/album/shinycolors`, cacheStrategy())
     .then((response) => {
       return response.json();
     })
